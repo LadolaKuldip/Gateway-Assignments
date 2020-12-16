@@ -1,0 +1,4 @@
+﻿2020-12-16 18:23:06,910 [11] DEBUG Source_Control_Final_Assignment.Controllers.HomeController [(null)] - User Info Page Visited
+2020-12-16 18:23:32,193 [12] DEBUG Source_Control_Final_Assignment.Controllers.HomeController [(null)] - User Info Page Visited
+2020-12-16 18:26:05,376 [11] DEBUG Source_Control_Final_Assignment.Controllers.HomeController [(null)] - User Info Page Visited
+2020-12-16 18:26:34,935 [12] DEBUG Source_Control_Final_Assignment.Controllers.HomeController [(null)] - User Info Page Visited
