@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "pageNotFound";
+}
+
+<h2>pageNotFound</h2>
+
+<div class="col-md-12">
+    <div class="text-center">
+        <h1 style="color:#DA5A2E;font-size: 210px; font-weight: 900; text-shadow: 4px 4px 0 #fff, 6px 6px 0 #343a40;">
+            404
+        </h1>
+        <h3 style="color:#3E5569;margin:30px 0px;">
+            PAGE NOT FOUND !
+        </h3>
+        <p style="color:#A1AAB2;margin:50px 0px;">
+            YOU SEEM TO BE TRYING TO FIND WAY HOME
+        </p>
+        
+        @Html.ActionLink("Back to List", "Index", "Product", new { }, new { @class = "btn btn-danger" })
+    </div>
+</div>

@@ -1,0 +1,96 @@
+﻿@model ProductManagement.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+}
+<link href="~/Content/custom-card.css" rel="stylesheet">
+<h2>Details</h2>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-12">
+            <div class="card panel-body">
+
+                <div class="col-md-12">
+                    <div class="col-md-4 col4">
+                        @if (Model.LargeImagePath != null)
+                        {
+                            <img class="img-responsive" src="@Url.Content(Model.LargeImagePath)" alt="" />
+                        }
+                        @if (Model.SmallImagePath != null)
+                        {
+                            <div class="col-md-12 text-center" style="padding:0px;height:100px;border:2px outset black;width: fit-content;">
+                                <img class="img-responsive" src="@Url.Content(Model.SmallImagePath)" alt="" style="height:100%;" />
+                            </div>
+                        }
+                    </div>
+                    <div class="col-md-8">
+                        <h2>@Html.DisplayFor(model => model.Name)</h2>
+                        <h5 style="margin:20px 0px;">
+                            <span class="item1">@Html.DisplayFor(model => model.Category.Name)</span>
+                        </h5>
+                        <h5>
+                            <span class="col-md-6" style="margin-bottom:20px;">
+                                &#8377;
+                                <span class="item">@Html.DisplayFor(model => model.Price)</span>
+                            </span>
+                            <span class="col-md-6" style="margin-bottom:20px;">
+                                Quantity :
+                                <span class="item1">@Html.DisplayFor(model => model.Quantity)</span>
+                            </span>
+                        </h5>
+                        <div class="col-md-12" style="padding:0px;">
+                            <div class="tab">
+                                <button class="tablinks" onclick="openTab(event, 'Description')" id="defaultOpen">Small Description</button>
+                                <button class="tablinks" onclick="openTab(event, 'Specification')">Large Description</button>
+                            </div>
+
+                            <div id="Description" class="tabcontent" style="min-height:250px;">
+                                <h3>Description</h3>
+                                <div style="text-align: justify;min-height:160px;">
+                                    <p>@Html.DisplayFor(model => model.ShortDescription)</p>
+                                </div>
+                            </div>
+
+                            <div id="Specification" class="tabcontent" style="min-height:250px;">
+                                <h3>Specification</h3>
+                                <div style="text-align: justify;min-height:160px;">
+                                    <p>@Html.DisplayFor(model => model.LongDescription)</p>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<br />
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Back to List", "Index", new { }, new { @class = "btn btn-warning" })
+</p>
+
+
+@section scripts{
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        document.getElementById("defaultOpen").click();
+    </script>
+
+}

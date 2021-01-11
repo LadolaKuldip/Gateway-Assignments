@@ -1,0 +1,182 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+
+@model IPagedList<ProductManagement.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+<link href="~/Content/custom-card.css" rel="stylesheet">
+<h2>Index</h2>
+
+<div class="col-md-12" style="margin-bottom: 30px;">
+    <span style="display:inline;">
+        @Html.ActionLink("Create New", "Create", new { }, new { @class = "btn btn-warning" })
+    </span>
+    <span style="float:right;">
+        @Html.ActionLink("Category", "Index", "Category",new { }, new { @class = "btn btn-primary" })
+    </span>
+</div>
+
+@using (Html.BeginForm("Index", "Product", FormMethod.Get))
+{
+    <div class="form-group">
+        Search Option: 
+        @Html.RadioButton("option", "Name") <text>Name</text> 
+        @Html.RadioButton("option", "Category") <text> Category </text>
+        @Html.RadioButton("option", "Price") <text> Price </text>
+        @Html.TextBox("searchData", ViewBag.SearchData as string)
+        <input type="submit" value="Search" class="btn btn-primary" />
+        </div>
+    }
+<div class="form-group">
+    Short Option:
+    @Html.ActionLink("Name", "Index", new { sortOrder = ViewBag.NameSortParm, filterValue = ViewBag.SearchData, option = ViewBag.Option }, new { @class = "btn btn-info" })
+    @Html.ActionLink("Category", "Index", new { sortOrder = ViewBag.CategorySortParm, filterValue = ViewBag.SearchData, option = ViewBag.Option }, new { @class = "btn btn-info" })
+    @Html.ActionLink("Price", "Index", new { sortOrder = ViewBag.PriceSortParm, filterValue = ViewBag.SearchData, option = ViewBag.Option }, new { @class = "btn btn-info" })
+</div>
+@if (!Model.Any())
+{
+    <br />
+    <span class="item">
+        We don't have any Product with your specifications yet.
+     </span>
+     <br />
+}
+else
+{
+
+    using (Html.BeginForm("MultiDelete", "Product", FormMethod.Post))
+    {
+        if (User.Identity.IsAuthenticated)
+        {
+        <div class="form-group">
+             Multiple Delete:
+             <input type="checkbox" id="checkBoxAll" />
+             <input type="submit" id="submit" value="Delete All" class="btn btn-danger" onclick="return confirm('Are you sure to delete multipe products?')" />
+        </div>
+        <br />
+        }
+        <div class="container">
+            <div class="row">
+
+                @foreach (var product in Model)
+                {
+                    <div class="col-md-6">
+                        <div class="card panel-body">
+                            <div style="min-height:15px;">
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <input type="checkbox" class="ckbox" value="@product.Id" name="Ids" />
+                                }
+                            </div>
+                            <div class="col-md-12" style="padding-left:0px;">
+                                <div class="col-md-4 col4">
+                                    <div style="height:200px;">
+                                        @if (product.SmallImagePath != null)
+                                        {
+                                            <img src="@Url.Content(product.SmallImagePath)" alt="no image" class="img-responsive image">
+                                        }
+                                    </div>
+                                    <div class="col-md-12 text-center" >
+                                        <h5>&#8377; <span class="item">@product.Price</span></h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-8" style="padding-right:0px;">
+                                    <div style="min-height:50px;">
+                                        <h3 style="margin-top:-10px;">@product.Name</h3>
+                                    </div>
+                                    <h5><span class="item1">@product.Category.Name</span></h5>
+                                    <div style="text-align: justify;min-height:150px;">
+                                        <p>@product.ShortDescription </p>
+                                    </div>
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                        <div class="col-md-12 panelBottom text-center">
+                                            @Html.ActionLink("Edit", "Edit", new { id = product.Id }, new { @class = "btn btn-primary" })
+                                            @Html.ActionLink("Details", "Details", new { id = product.Id }, new { @class = "btn btn-success" })
+                                            <a href="@Url.Action("Delete", "Product", new { id = product.Id })" onclick="return confirm('Are you sure to delete product ?')" class="btn btn-danger">Delete</a>
+                                            
+                                        </div>
+                                    }
+                                    </div>
+                            </div>
+                        </div>
+
+                    </div>
+                }
+
+            </div>
+        </div>
+    }
+}
+<br />
+    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+    @Html.PagedListPager(Model, pageNumber => Url.Action("Index",
+        new { pageNumber, sortOrder = ViewBag.CurrentSortOrder, filterValue = ViewBag.SearchData, option = ViewBag.Option }))
+
+@section scripts{
+    <script>
+    $(document).ready(function () {
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+
+            "onclick": null,
+            "showDuration": "200",
+            "hideDuration": "1500",
+            "timeOut": "6000",
+            "extendedTimeOut": "1200",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        };
+        @*"positionClass": "toast-top-full-width",
+        toastr.optionsOverride = 'positionclass = "toast-top-center"';
+        toastr.options.positionClass = 'toast-top-center';*@
+
+        var Type = "@TempData["Type"]";
+        var Message = "@TempData["Message"]";
+        if (Type == "0") {
+            toastr.success(Message, 'The Site Says')
+        } else if (Type == "1") {
+            toastr.info(Message, 'The Site Says')
+        } else if (Type == "2") {
+            toastr.warning(Message, 'The Site Says')
+        } else if (Type == "3") {
+            toastr.error(Message, 'Inconceivable!')
+        }
+    });
+    
+        $(document).ready(function () {
+            $('#checkBoxAll').click(function () {
+                if ($(this).is(":checked")) {
+                    $(".ckbox").prop("checked", true)
+                }
+                else {
+                    $(".ckbox").prop("checked", false)
+                }
+            });
+        });
+    
+        $('#submit').prop("disabled", true);
+        $('input:checkbox').click(function () {
+            if ($(this).is(':checked')) {
+                $('#submit').prop("disabled", false);
+            } else {
+                if ($('.ckbox').filter(':checked').length < 1) {
+                    $('#submit').attr('disabled', true);
+                }
+            }
+        });
+        $('#checkBoxAll').click(function () {
+            if (!$(this).is(':checked')) {
+                $('#submit').prop("disabled", true);
+            }
+        });
+    </script>
+
+}
+
+
