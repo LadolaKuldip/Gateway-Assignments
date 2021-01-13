@@ -1,0 +1,788 @@
+{
+	"id": "d317eceb-fb5e-4c1b-b1db-5e968526a350",
+	"name": "Hotel_Management",
+	"timestamp": "2021-01-13T06:52:02.380Z",
+	"collection_id": "6e088701-4081-4f36-9824-6f94d4ac1fee",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 0,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "0f5f6964-2c1e-438a-b082-2989c7bd5d00",
+			"name": "GET All Hotels",
+			"url": "https://localhost:44397/api/Hotel",
+			"time": 36,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				36
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "d6073905-9c1e-45cb-8c46-cdb38c25125a",
+			"name": "GET Hotel by Id",
+			"url": "https://localhost:44397/api/Hotel/3",
+			"time": 21,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				21
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "d85fb76a-cdc0-4902-9688-9784a3500741",
+			"name": "Add Hotel 1",
+			"url": "https://localhost:44397/api/Hotel",
+			"time": 20,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				20
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "64be3e96-2f56-44c2-9877-a0a155645fcb",
+			"name": "Add Hotel 2",
+			"url": "https://localhost:44397/api/Hotel",
+			"time": 15,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				15
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "0c877c63-c979-43fb-9c5a-ac183024ba48",
+			"name": "Add Hotel 3",
+			"url": "https://localhost:44397/api/Hotel",
+			"time": 23,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				23
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "6806de24-b4ae-41b8-b2d5-64e58067daa6",
+			"name": "Add Hotel 4",
+			"url": "https://localhost:44397/api/Hotel",
+			"time": 18,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				18
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "6a07b723-4587-4e0d-87d8-99e2689b5c93",
+			"name": "Add Hotel 5",
+			"url": "https://localhost:44397/api/Hotel",
+			"time": 24,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				24
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "bc80c9ff-dc64-497a-b228-927fe339b7a1",
+			"name": "GET Rooms of Hotel by Id",
+			"url": "https://localhost:44397/api/Room/3",
+			"time": 19,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				19
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "6fea49ba-8cf8-4ac3-8b0a-28f5801c6aa7",
+			"name": "GET Rooms with Optional Params",
+			"url": "https://localhost:44397/api/Room/param?city=Rajkot&pinCode=360005&price=1200&category=categories%201",
+			"time": 23,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				23
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "0b04702d-5d0a-4cdd-802f-6f4459de413a",
+			"name": "Add Room 1 for Hotel 1",
+			"url": "https://localhost:44397/api/Room",
+			"time": 23,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				23
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "2e95ea45-ecd3-488c-a31e-52274994546d",
+			"name": "Add Room 2 for Hotel 1",
+			"url": "https://localhost:44397/api/Room",
+			"time": 45,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				45
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "71361fb2-71b5-43ca-83db-f3fd8c1a793b",
+			"name": "Add Room 3 for Hotel 1",
+			"url": "https://localhost:44397/api/Room",
+			"time": 23,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				23
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "febf3384-fabd-4759-8639-8c5ac66707e4",
+			"name": "Add Room 1 for Hotel 2",
+			"url": "https://localhost:44397/api/Room",
+			"time": 20,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				20
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "741db591-0212-4290-ae5b-54a07137d481",
+			"name": "Add Room 2 for Hotel 2",
+			"url": "https://localhost:44397/api/Room",
+			"time": 21,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				21
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "f80ae813-8426-4950-9ca6-57ba68753fb2",
+			"name": "Add Room 3 for Hotel 2",
+			"url": "https://localhost:44397/api/Room",
+			"time": 20,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				20
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "7a02e435-356b-4142-ba9b-9c2b360d099d",
+			"name": "Add Room 1 for Hotel 3",
+			"url": "https://localhost:44397/api/Room",
+			"time": 29,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				29
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "e31715a5-3597-4ba6-8b9a-f141f96422c5",
+			"name": "Add Room 2 for Hotel 3",
+			"url": "https://localhost:44397/api/Room",
+			"time": 19,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				19
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "c31a4d19-4c2a-4d72-84c6-b79ba6b41919",
+			"name": "Add Room 3 for Hotel 3",
+			"url": "https://localhost:44397/api/Room",
+			"time": 21,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				21
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "131ca391-4bd0-4477-9ec4-b3605880be7f",
+			"name": "Add Room 1 for Hotel 4",
+			"url": "https://localhost:44397/api/Room",
+			"time": 21,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				21
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "2db9284c-5398-4906-8673-2c0bbd69c07b",
+			"name": "Add Room 2 for Hotel 4",
+			"url": "https://localhost:44397/api/Room",
+			"time": 20,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				20
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "7b0e6a83-2077-4b29-94ff-c3714100e220",
+			"name": "Add Room 3 for Hotel 4",
+			"url": "https://localhost:44397/api/Room",
+			"time": 18,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				18
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "4cddf83e-858a-4939-93a6-d26879b104fc",
+			"name": "Add Room 1 for Hotel 5",
+			"url": "https://localhost:44397/api/Room",
+			"time": 20,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				20
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "a855862f-9c34-4c09-82ef-d2520a6bf5e6",
+			"name": "Add Room 2 for Hotel 5",
+			"url": "https://localhost:44397/api/Room",
+			"time": 22,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				22
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "b0e04f18-8da2-4a8f-94be-5dbc0ae1a5c2",
+			"name": "Add Room 3 for Hotel 5",
+			"url": "https://localhost:44397/api/Room",
+			"time": 23,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				23
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "a1e5af03-747c-410d-8bda-4d593ed816ed",
+			"name": "GET Availalability of Room",
+			"url": "https://localhost:44397/api/Booking?roomId=5&date=2021-01-13",
+			"time": 18,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				18
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "eca01163-6b1d-4caf-86c9-ef9fed15bd55",
+			"name": "Add Booking 1",
+			"url": "https://localhost:44397/api/Booking",
+			"time": 23,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				23
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "1a1950f4-1dfe-4888-adf5-27d5e9653689",
+			"name": "Add Booking 2",
+			"url": "https://localhost:44397/api/Booking",
+			"time": 31,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				31
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "1fec04b5-8976-4f59-ad61-930017db299d",
+			"name": "Add Booking 3",
+			"url": "https://localhost:44397/api/Booking",
+			"time": 19,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				19
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "308e7a5e-a5f2-4a83-b7bc-6af4644bb691",
+			"name": "Add Booking 4",
+			"url": "https://localhost:44397/api/Booking",
+			"time": 22,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				22
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "feca1419-c890-4b1e-805b-910a45fd7fbf",
+			"name": "Add Booking 5",
+			"url": "https://localhost:44397/api/Booking",
+			"time": 14,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				14
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "335e3f53-1219-4ead-b567-6874f6310a20",
+			"name": "PUT Booking to change Date",
+			"url": "https://localhost:44397/api/Booking",
+			"time": 16,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				16
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "ffd02ca4-66a4-4b1b-b905-7a4098107327",
+			"name": "PUT Booking to chane Status",
+			"url": "https://localhost:44397/api/Booking/12/Definitive",
+			"time": 17,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				17
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "3c0052d4-2706-4806-9c16-3f46d4646801",
+			"name": "DELETE Booking (Soft Delete)",
+			"url": "https://localhost:44397/api/Booking/13",
+			"time": 14,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				14
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "ce2dae99-98f6-4ccf-bbdd-a014084edcb5",
+			"name": "Register User",
+			"url": "https://localhost:44397/api/Account/Register",
+			"time": 58,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				58
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "c397ef19-6f6e-467b-a5d8-395a6f8fca38",
+			"name": "GET Token",
+			"url": "https://localhost:44397/Token",
+			"time": 61,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				61
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 837,
+	"collection": {
+		"requests": [
+			{
+				"id": "0f5f6964-2c1e-438a-b082-2989c7bd5d00",
+				"method": "GET"
+			},
+			{
+				"id": "d6073905-9c1e-45cb-8c46-cdb38c25125a",
+				"method": "GET"
+			},
+			{
+				"id": "d85fb76a-cdc0-4902-9688-9784a3500741",
+				"method": "POST"
+			},
+			{
+				"id": "64be3e96-2f56-44c2-9877-a0a155645fcb",
+				"method": "POST"
+			},
+			{
+				"id": "0c877c63-c979-43fb-9c5a-ac183024ba48",
+				"method": "POST"
+			},
+			{
+				"id": "6806de24-b4ae-41b8-b2d5-64e58067daa6",
+				"method": "POST"
+			},
+			{
+				"id": "6a07b723-4587-4e0d-87d8-99e2689b5c93",
+				"method": "POST"
+			},
+			{
+				"id": "bc80c9ff-dc64-497a-b228-927fe339b7a1",
+				"method": "GET"
+			},
+			{
+				"id": "6fea49ba-8cf8-4ac3-8b0a-28f5801c6aa7",
+				"method": "GET"
+			},
+			{
+				"id": "0b04702d-5d0a-4cdd-802f-6f4459de413a",
+				"method": "POST"
+			},
+			{
+				"id": "2e95ea45-ecd3-488c-a31e-52274994546d",
+				"method": "POST"
+			},
+			{
+				"id": "71361fb2-71b5-43ca-83db-f3fd8c1a793b",
+				"method": "POST"
+			},
+			{
+				"id": "febf3384-fabd-4759-8639-8c5ac66707e4",
+				"method": "POST"
+			},
+			{
+				"id": "741db591-0212-4290-ae5b-54a07137d481",
+				"method": "POST"
+			},
+			{
+				"id": "f80ae813-8426-4950-9ca6-57ba68753fb2",
+				"method": "POST"
+			},
+			{
+				"id": "7a02e435-356b-4142-ba9b-9c2b360d099d",
+				"method": "POST"
+			},
+			{
+				"id": "e31715a5-3597-4ba6-8b9a-f141f96422c5",
+				"method": "POST"
+			},
+			{
+				"id": "c31a4d19-4c2a-4d72-84c6-b79ba6b41919",
+				"method": "POST"
+			},
+			{
+				"id": "131ca391-4bd0-4477-9ec4-b3605880be7f",
+				"method": "POST"
+			},
+			{
+				"id": "2db9284c-5398-4906-8673-2c0bbd69c07b",
+				"method": "POST"
+			},
+			{
+				"id": "7b0e6a83-2077-4b29-94ff-c3714100e220",
+				"method": "POST"
+			},
+			{
+				"id": "4cddf83e-858a-4939-93a6-d26879b104fc",
+				"method": "POST"
+			},
+			{
+				"id": "a855862f-9c34-4c09-82ef-d2520a6bf5e6",
+				"method": "POST"
+			},
+			{
+				"id": "b0e04f18-8da2-4a8f-94be-5dbc0ae1a5c2",
+				"method": "POST"
+			},
+			{
+				"id": "a1e5af03-747c-410d-8bda-4d593ed816ed",
+				"method": "GET"
+			},
+			{
+				"id": "eca01163-6b1d-4caf-86c9-ef9fed15bd55",
+				"method": "POST"
+			},
+			{
+				"id": "1a1950f4-1dfe-4888-adf5-27d5e9653689",
+				"method": "POST"
+			},
+			{
+				"id": "1fec04b5-8976-4f59-ad61-930017db299d",
+				"method": "POST"
+			},
+			{
+				"id": "308e7a5e-a5f2-4a83-b7bc-6af4644bb691",
+				"method": "POST"
+			},
+			{
+				"id": "feca1419-c890-4b1e-805b-910a45fd7fbf",
+				"method": "POST"
+			},
+			{
+				"id": "335e3f53-1219-4ead-b567-6874f6310a20",
+				"method": "PUT"
+			},
+			{
+				"id": "ffd02ca4-66a4-4b1b-b905-7a4098107327",
+				"method": "PUT"
+			},
+			{
+				"id": "3c0052d4-2706-4806-9c16-3f46d4646801",
+				"method": "DELETE"
+			},
+			{
+				"id": "ce2dae99-98f6-4ccf-bbdd-a014084edcb5",
+				"method": "POST"
+			},
+			{
+				"id": "c397ef19-6f6e-467b-a5d8-395a6f8fca38",
+				"method": "POST"
+			}
+		]
+	}
+}
