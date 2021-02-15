@@ -1,0 +1,18 @@
+2021-01-05 10:48:15,716 [9] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by Anonymous User
+2021-01-05 15:01:11,605 [10] INFO  ProductManagement.Controllers.AccountController [(null)] - User Login with Emailkuldip.patel@gmail.com
+2021-01-05 15:01:11,871 [15] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by user [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-01-05 15:11:48,701 [10] INFO  ProductManagement.Controllers.AccountController [(null)] - User Login with Emailkuldip.patel@gmail.com
+2021-01-05 15:11:48,859 [19] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by user [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-01-05 15:21:58,127 [12] INFO  ProductManagement.Controllers.AccountController [(null)] - User Login with Emailkuldip.patel@gmail.com
+2021-01-05 15:21:58,295 [12] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by user [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-01-05 15:33:40,130 [9] ERROR ProductManagement.ExceptionHandler.UserExceptionHandler [(null)] - Exception Occured :One or more errors occurred.
+2021-01-05 15:54:54,130 [11] INFO  ProductManagement.Controllers.AccountController [(null)] - User Login with Emailkuldip.patel@gmail.com
+2021-01-05 15:54:54,477 [8] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by user [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-01-05 16:55:39,778 [9] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by Anonymous User
+2021-01-05 16:56:11,406 [10] ERROR ProductManagement.ExceptionHandler.UserExceptionHandler [(null)] - Exception Occured :The model item passed into the dictionary is of type 'ProductManagement.Models.Product', but this dictionary requires a model item of type 'ProductManagement.Models.ProductViewModel'.
+2021-01-05 17:11:25,931 [9] INFO  ProductManagement.Controllers.AccountController [(null)] - User Login with Emailkuldip.patel@gmail.com
+2021-01-05 17:11:26,091 [14] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by user [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-01-05 17:16:58,864 [9] INFO  ProductManagement.Controllers.AccountController [(null)] - User Login with Emailkuldip.patel@gmail.com
+2021-01-05 17:16:59,022 [15] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by user [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-01-05 17:23:11,558 [13] ERROR ProductManagement.ExceptionHandler.UserExceptionHandler [(null)] - Exception Occured :The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Details(Int32)' in 'ProductManagement.Controllers.ProductController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters

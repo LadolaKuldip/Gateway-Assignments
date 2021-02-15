@@ -1,0 +1,52 @@
+﻿2020-12-26 16:28:04,643 [14] INFO  ProductManagement.Controllers.AccountController [(null)] - User Login with Emailkuldip.patel@gmail.com
+2020-12-26 16:28:04,912 [15] DEBUG ProductManagement.Controllers.HomeController [(null)] - User Info Page Visited
+2020-12-26 16:34:05,367 [11] INFO  ProductManagement.Controllers.AccountController [(null)] - User Login with Emailkuldip.patel@gmail.com
+2020-12-26 16:34:05,545 [12] DEBUG ProductManagement.Controllers.HomeController [(null)] - User Info Page Visited
+2020-12-26 16:34:37,326 [11] ERROR ProductManagement.ExceptionHandler.UserExceptionHandler [(null)] - Exception Occured :The view 'MultiDelete' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Product/MultiDelete.aspx
+~/Views/Product/MultiDelete.ascx
+~/Views/Shared/MultiDelete.aspx
+~/Views/Shared/MultiDelete.ascx
+~/Views/Product/MultiDelete.cshtml
+~/Views/Product/MultiDelete.vbhtml
+~/Views/Shared/MultiDelete.cshtml
+~/Views/Shared/MultiDelete.vbhtml
+2020-12-26 16:36:08,521 [11] ERROR ProductManagement.ExceptionHandler.UserExceptionHandler [(null)] - Exception Occured :The view 'MultiDelete' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Product/MultiDelete.aspx
+~/Views/Product/MultiDelete.ascx
+~/Views/Shared/MultiDelete.aspx
+~/Views/Shared/MultiDelete.ascx
+~/Views/Product/MultiDelete.cshtml
+~/Views/Product/MultiDelete.vbhtml
+~/Views/Shared/MultiDelete.cshtml
+~/Views/Shared/MultiDelete.vbhtml
+2020-12-26 17:04:59,643 [12] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
+2020-12-26 17:05:26,219 [13] INFO  ProductManagement.Controllers.AccountController [(null)] - User Login with Emailkuldip.patel@gmail.com
+2020-12-26 17:05:26,302 [13] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by userkuldip.patel@gmail.com
+2020-12-26 17:05:28,509 [13] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userkuldip.patel@gmail.com
+2020-12-26 17:05:58,221 [14] INFO  ProductManagement.Controllers.HomeController [(null)] - Product Created with Name(Watch) by Userkuldip.patel@gmail.com
+2020-12-26 17:05:58,250 [13] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userkuldip.patel@gmail.com
+2020-12-26 17:06:16,206 [12] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userkuldip.patel@gmail.com
+2020-12-26 17:06:24,313 [13] INFO  ProductManagement.Controllers.HomeController [(null)] - Product Edited with Id(26) by Userkuldip.patel@gmail.com
+2020-12-26 17:06:24,343 [15] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userkuldip.patel@gmail.com
+2020-12-26 17:06:28,547 [13] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userkuldip.patel@gmail.com
+2020-12-26 17:06:32,441 [15] INFO  ProductManagement.Controllers.HomeController [(null)] - Product Details(26) Page Visited by Userkuldip.patel@gmail.com
+2020-12-26 17:06:35,924 [13] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userkuldip.patel@gmail.com
+2020-12-26 17:06:38,069 [14] INFO  ProductManagement.Controllers.HomeController [(null)] - Product Deleted with Id(19) by Userkuldip.patel@gmail.com
+2020-12-26 17:06:38,101 [15] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userkuldip.patel@gmail.com
+2020-12-26 17:06:41,817 [13] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userkuldip.patel@gmail.com
+2020-12-26 17:06:44,100 [13] INFO  ProductManagement.Controllers.HomeController [(null)] - Product Deleted with Id(26) by Userkuldip.patel@gmail.com
+2020-12-26 17:06:44,132 [15] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userkuldip.patel@gmail.com
+2020-12-26 17:08:47,958 [15] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userkuldip.patel@gmail.com
+2020-12-26 17:09:11,441 [14] ERROR ProductManagement.ExceptionHandler.UserExceptionHandler [(null)] - Exception Occured :The view 'MultiDelete' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Product/MultiDelete.aspx
+~/Views/Product/MultiDelete.ascx
+~/Views/Shared/MultiDelete.aspx
+~/Views/Shared/MultiDelete.ascx
+~/Views/Product/MultiDelete.cshtml
+~/Views/Product/MultiDelete.vbhtml
+~/Views/Shared/MultiDelete.cshtml
+~/Views/Shared/MultiDelete.vbhtml
+2020-12-26 17:12:52,172 [10] ERROR ProductManagement.ExceptionHandler.UserExceptionHandler [(null)] - Exception Occured :The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Edit(Int32)' in 'ProductManagement.Controllers.ProductController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+2020-12-26 17:30:57,603 [38] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userkuldip.patel@gmail.com

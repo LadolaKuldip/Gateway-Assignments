@@ -1,0 +1,96 @@
+2020-12-27 08:53:15,501 [9] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
+2020-12-27 08:53:34,545 [9] INFO  ProductManagement.Controllers.AccountController [(null)] - User Login with Emailkuldip.patel@gmail.com
+2020-12-27 08:53:34,589 [10] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by userkuldip.patel@gmail.com
+2020-12-27 08:53:35,633 [11] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userkuldip.patel@gmail.com
+2020-12-27 08:53:55,875 [9] ERROR ProductManagement.ExceptionHandler.UserExceptionHandler [(null)] - Exception Occured :Object reference not set to an instance of an object.
+2020-12-27 08:54:32,380 [9] ERROR ProductManagement.ExceptionHandler.UserExceptionHandler [(null)] - Exception Occured :Object reference not set to an instance of an object.
+2020-12-27 08:59:16,971 [9] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userkuldip.patel@gmail.com
+2020-12-27 08:59:51,223 [10] ERROR ProductManagement.ExceptionHandler.UserExceptionHandler [(null)] - Exception Occured :The method or operation is not implemented.
+2020-12-27 10:45:45,192 [9] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userkuldip.patel@gmail.com
+2020-12-27 10:47:22,001 [9] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userkuldip.patel@gmail.com
+2020-12-27 10:47:33,730 [9] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userkuldip.patel@gmail.com
+2020-12-27 10:49:49,541 [9] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userkuldip.patel@gmail.com
+2020-12-27 10:49:56,030 [10] INFO  ProductManagement.Controllers.HomeController [(null)] - Product Deleted with Id(14) by Userkuldip.patel@gmail.com
+2020-12-27 10:49:56,070 [11] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userkuldip.patel@gmail.com
+2020-12-27 10:50:53,432 [9] INFO  ProductManagement.Controllers.HomeController [(null)] - Product Created with Name(Apple Watch Series 6) by Userkuldip.patel@gmail.com
+2020-12-27 10:50:53,450 [11] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userkuldip.patel@gmail.com
+2020-12-27 10:51:47,309 [11] INFO  ProductManagement.Controllers.HomeController [(null)] - Product Created with Name(Samsung Galaxy Watch Active 2) by Userkuldip.patel@gmail.com
+2020-12-27 10:51:47,342 [13] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userkuldip.patel@gmail.com
+2020-12-27 10:51:56,777 [10] INFO  ProductManagement.Controllers.HomeController [(null)] - Product Deleted with Id(28) by Userkuldip.patel@gmail.com
+2020-12-27 10:51:56,819 [13] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userkuldip.patel@gmail.com
+2020-12-27 10:52:01,534 [12] INFO  ProductManagement.Controllers.HomeController [(null)] - Product Deleted with Id(27) by Userkuldip.patel@gmail.com
+2020-12-27 10:52:01,551 [13] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userkuldip.patel@gmail.com
+2020-12-27 10:52:07,126 [10] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userkuldip.patel@gmail.com
+2020-12-27 11:07:31,461 [16] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Created with Name(Fashion) by Userkuldip.patel@gmail.com
+2020-12-27 11:08:08,276 [12] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Edited with Id(6) by Userkuldip.patel@gmail.com
+2020-12-27 11:11:28,983 [9] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userkuldip.patel@gmail.com
+2020-12-27 11:19:00,316 [10] ERROR ProductManagement.ExceptionHandler.UserExceptionHandler [(null)] - Exception Occured :Object reference not set to an instance of an object.
+2020-12-27 11:24:43,888 [9] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
+2020-12-27 11:25:42,956 [9] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
+2020-12-27 11:25:57,903 [9] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
+2020-12-27 11:36:27,380 [9] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by Anonymous User
+2020-12-27 11:36:41,983 [9] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
+2020-12-27 11:37:20,434 [10] INFO  ProductManagement.Controllers.AccountController [(null)] - User Login with Emailkuldip.patel@gmail.com
+2020-12-27 11:37:20,527 [10] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:37:22,500 [9] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:39:28,544 [11] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by Anonymous User
+2020-12-27 11:39:50,722 [11] INFO  ProductManagement.Controllers.AccountController [(null)] - User Login with Emailkuldip.patel@gmail.com
+2020-12-27 11:39:50,806 [12] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:39:53,790 [11] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:39:59,638 [11] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Deleted with Id(3) by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:40:02,053 [11] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Deleted with Id(5) by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:40:15,005 [12] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Created with Name(General) by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:40:23,370 [11] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Created with Name(Electronics) by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:40:32,140 [11] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:41:01,510 [12] INFO  ProductManagement.Controllers.HomeController [(null)] - Product Created with Name(Apple Watch Series 6) by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:41:01,529 [13] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:41:16,576 [11] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:41:20,243 [14] INFO  ProductManagement.Controllers.HomeController [(null)] - Product Details(29) Page Visited by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:41:24,096 [11] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:41:47,870 [11] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Created with Name(Fasi) by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:41:58,157 [11] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Edited with Id(9) by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:42:04,165 [13] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Edited with Id(9) by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:42:34,068 [11] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:43:10,102 [11] INFO  ProductManagement.Controllers.HomeController [(null)] - Product Created with Name(Samsung Galaxy Watch Active 2) by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:43:10,126 [14] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:43:16,446 [11] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:43:51,395 [11] INFO  ProductManagement.Controllers.HomeController [(null)] - Product Created with Name(Storm) by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:43:51,419 [14] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:44:01,419 [12] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:44:04,017 [16] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:44:05,975 [16] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:44:08,260 [17] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:45:11,995 [17] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Edited with Id(9) by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:45:50,986 [17] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Created with Name() by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:45:51,885 [20] ERROR ProductManagement.ExceptionHandler.UserExceptionHandler [(null)] - Exception Occured :C:\Users\Kuldip\AppData\Local\Temp\Temporary ASP.NET Files\vs\03a91a07\54f9ff2c\App_Web_index.cshtml.8a329799.7mrkqnzv.0.cs(433): error CS1525: Invalid expression term '='
+2020-12-27 11:46:16,850 [17] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Deleted with Id(10) by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:46:34,423 [23] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Created with Name() by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:46:42,650 [23] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Deleted with Id(11) by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:46:45,811 [21] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Created with Name() by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:46:52,289 [25] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Deleted with Id(12) by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:47:12,007 [25] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Created with Name() by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:47:32,084 [25] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Edited with Id(13) by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:47:34,184 [25] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Deleted with Id(13) by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:48:51,039 [21] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Created with Name() by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:48:54,272 [21] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Deleted with Id(14) by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:50:15,573 [8] INFO  ProductManagement.Controllers.AccountController [(null)] - User Login with Emailkuldip.patel@gmail.com
+2020-12-27 11:50:20,775 [11] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Created with Name() by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:50:26,464 [7] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Deleted with Id(15) by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:51:43,400 [8] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Created with Name() by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:51:47,513 [8] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Deleted with Id(16) by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:55:57,972 [10] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by Anonymous User
+2020-12-27 11:56:13,442 [11] INFO  ProductManagement.Controllers.AccountController [(null)] - User Login with Emailkuldip.patel@gmail.com
+2020-12-27 11:56:13,524 [11] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:56:14,436 [10] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:56:25,325 [10] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Edited with Id(9) by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 11:58:40,004 [13] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Edited with Id(9) by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 12:00:55,476 [10] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Created with Name() by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 12:00:59,022 [11] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Deleted with Id(17) by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 12:01:05,248 [24] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Edited with Id(9) by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 12:01:16,194 [10] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Edited with Id(9) by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 12:01:24,918 [21] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Edited with Id(9) by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 12:07:20,644 [10] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Deleted with Id(9) by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 12:07:29,596 [11] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Created with Name(Fashion) by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 12:07:35,961 [22] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
+2020-12-27 12:13:14,216 [10] INFO  ProductManagement.Controllers.AccountController [(null)] - User Login with Emailkuldip.patel@gmail.com
+2020-12-27 12:15:57,012 [11] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Userbe09ff1b-1dfd-4996-a6c4-e00794f1397e
