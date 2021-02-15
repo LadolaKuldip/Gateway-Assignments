@@ -1,0 +1,100 @@
+C:\Users\Kuldip\Downloads\Microservice.WebApi-master\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\Kuldip\Downloads\Microservice.WebApi-master\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\Kuldip\Downloads\Microservice.WebApi-master\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\Kuldip\Downloads\Microservice.WebApi-master\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\Gateway.WebApi.exe
+C:\Users\Kuldip\Downloads\Microservice.WebApi-master\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\ocelot.json
+C:\Users\Kuldip\Downloads\Microservice.WebApi-master\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\Gateway.WebApi.deps.json
+C:\Users\Kuldip\Downloads\Microservice.WebApi-master\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\Gateway.WebApi.runtimeconfig.json
+C:\Users\Kuldip\Downloads\Microservice.WebApi-master\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\Gateway.WebApi.runtimeconfig.dev.json
+C:\Users\Kuldip\Downloads\Microservice.WebApi-master\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\Gateway.WebApi.dll
+C:\Users\Kuldip\Downloads\Microservice.WebApi-master\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\Gateway.WebApi.pdb
+C:\Users\Kuldip\Downloads\Microservice.WebApi-master\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\FluentValidation.dll
+C:\Users\Kuldip\Downloads\Microservice.WebApi-master\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Kuldip\Downloads\Microservice.WebApi-master\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.MiddlewareAnalysis.dll
+C:\Users\Kuldip\Downloads\Microservice.WebApi-master\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Kuldip\Downloads\Microservice.WebApi-master\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Kuldip\Downloads\Microservice.WebApi-master\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DiagnosticAdapter.dll
+C:\Users\Kuldip\Downloads\Microservice.WebApi-master\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Kuldip\Downloads\Microservice.WebApi-master\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\Kuldip\Downloads\Microservice.WebApi-master\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\Ocelot.dll
+C:\Users\Kuldip\Downloads\Microservice.WebApi-master\Microservice.WebApi-master\Gateway.WebApi\obj\Debug\netcoreapp3.1\Gateway.WebApi.csprojAssemblyReference.cache
+C:\Users\Kuldip\Downloads\Microservice.WebApi-master\Microservice.WebApi-master\Gateway.WebApi\obj\Debug\netcoreapp3.1\Gateway.WebApi.AssemblyInfoInputs.cache
+C:\Users\Kuldip\Downloads\Microservice.WebApi-master\Microservice.WebApi-master\Gateway.WebApi\obj\Debug\netcoreapp3.1\Gateway.WebApi.AssemblyInfo.cs
+C:\Users\Kuldip\Downloads\Microservice.WebApi-master\Microservice.WebApi-master\Gateway.WebApi\obj\Debug\netcoreapp3.1\Gateway.WebApi.csproj.CoreCompileInputs.cache
+C:\Users\Kuldip\Downloads\Microservice.WebApi-master\Microservice.WebApi-master\Gateway.WebApi\obj\Debug\netcoreapp3.1\Gateway.WebApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Kuldip\Downloads\Microservice.WebApi-master\Microservice.WebApi-master\Gateway.WebApi\obj\Debug\netcoreapp3.1\Gateway.WebApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Kuldip\Downloads\Microservice.WebApi-master\Microservice.WebApi-master\Gateway.WebApi\obj\Debug\netcoreapp3.1\Gateway.WebApi.RazorTargetAssemblyInfo.cache
+C:\Users\Kuldip\Downloads\Microservice.WebApi-master\Microservice.WebApi-master\Gateway.WebApi\obj\Debug\netcoreapp3.1\Gateway.WebApi.csproj.CopyComplete
+C:\Users\Kuldip\Downloads\Microservice.WebApi-master\Microservice.WebApi-master\Gateway.WebApi\obj\Debug\netcoreapp3.1\staticwebassets\Gateway.WebApi.StaticWebAssets.Manifest.cache
+C:\Users\Kuldip\Downloads\Microservice.WebApi-master\Microservice.WebApi-master\Gateway.WebApi\obj\Debug\netcoreapp3.1\staticwebassets\Gateway.WebApi.StaticWebAssets.xml
+C:\Users\Kuldip\Downloads\Microservice.WebApi-master\Microservice.WebApi-master\Gateway.WebApi\obj\Debug\netcoreapp3.1\Gateway.WebApi.dll
+C:\Users\Kuldip\Downloads\Microservice.WebApi-master\Microservice.WebApi-master\Gateway.WebApi\obj\Debug\netcoreapp3.1\Gateway.WebApi.pdb
+C:\Users\Kuldip\Downloads\Microservice.WebApi-master\Microservice.WebApi-master\Gateway.WebApi\obj\Debug\netcoreapp3.1\Gateway.WebApi.genruntimeconfig.cache
+E:\Gateway Projects\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\appsettings.Development.json
+E:\Gateway Projects\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\appsettings.json
+E:\Gateway Projects\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+E:\Gateway Projects\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\Gateway.WebApi.exe
+E:\Gateway Projects\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\ocelot.json
+E:\Gateway Projects\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\Gateway.WebApi.deps.json
+E:\Gateway Projects\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\Gateway.WebApi.runtimeconfig.json
+E:\Gateway Projects\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\Gateway.WebApi.runtimeconfig.dev.json
+E:\Gateway Projects\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\Gateway.WebApi.dll
+E:\Gateway Projects\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\Gateway.WebApi.pdb
+E:\Gateway Projects\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\FluentValidation.dll
+E:\Gateway Projects\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+E:\Gateway Projects\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.MiddlewareAnalysis.dll
+E:\Gateway Projects\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+E:\Gateway Projects\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\Gateway Projects\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DiagnosticAdapter.dll
+E:\Gateway Projects\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\Gateway Projects\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+E:\Gateway Projects\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\Ocelot.dll
+E:\Gateway Projects\Microservice.WebApi-master\Gateway.WebApi\obj\Debug\netcoreapp3.1\Gateway.WebApi.csprojAssemblyReference.cache
+E:\Gateway Projects\Microservice.WebApi-master\Gateway.WebApi\obj\Debug\netcoreapp3.1\Gateway.WebApi.AssemblyInfoInputs.cache
+E:\Gateway Projects\Microservice.WebApi-master\Gateway.WebApi\obj\Debug\netcoreapp3.1\Gateway.WebApi.AssemblyInfo.cs
+E:\Gateway Projects\Microservice.WebApi-master\Gateway.WebApi\obj\Debug\netcoreapp3.1\Gateway.WebApi.RazorTargetAssemblyInfo.cache
+E:\Gateway Projects\Microservice.WebApi-master\Gateway.WebApi\obj\Debug\netcoreapp3.1\Gateway.WebApi.csproj.CopyComplete
+E:\Gateway Projects\Microservice.WebApi-master\Gateway.WebApi\obj\Debug\netcoreapp3.1\staticwebassets\Gateway.WebApi.StaticWebAssets.Manifest.cache
+E:\Gateway Projects\Microservice.WebApi-master\Gateway.WebApi\obj\Debug\netcoreapp3.1\staticwebassets\Gateway.WebApi.StaticWebAssets.xml
+E:\Gateway Projects\Microservice.WebApi-master\Gateway.WebApi\obj\Debug\netcoreapp3.1\Gateway.WebApi.dll
+E:\Gateway Projects\Microservice.WebApi-master\Gateway.WebApi\obj\Debug\netcoreapp3.1\Gateway.WebApi.pdb
+E:\Gateway Projects\Microservice.WebApi-master\Gateway.WebApi\obj\Debug\netcoreapp3.1\Gateway.WebApi.genruntimeconfig.cache
+E:\Gateway Projects\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\Flurl.dll
+E:\Gateway Projects\Microservice.WebApi-master\Gateway.WebApi\bin\Debug\netcoreapp3.1\Flurl.Http.dll
+E:\Gateway Projects\Microservice.WebApi-master\Gateway.WebApi\obj\Debug\netcoreapp3.1\Gateway.WebApi.csproj.CoreCompileInputs.cache
+E:\Gateway Projects\Microservice.WebApi-master\Gateway.WebApi\obj\Debug\netcoreapp3.1\Gateway.WebApi.MvcApplicationPartsAssemblyInfo.cs
+E:\Gateway Projects\Microservice.WebApi-master\Gateway.WebApi\obj\Debug\netcoreapp3.1\Gateway.WebApi.MvcApplicationPartsAssemblyInfo.cache
+E:\Gateway Projects\Microservice.WebApi\Gateway.WebApi\bin\Debug\netcoreapp3.1\appsettings.Development.json
+E:\Gateway Projects\Microservice.WebApi\Gateway.WebApi\bin\Debug\netcoreapp3.1\appsettings.json
+E:\Gateway Projects\Microservice.WebApi\Gateway.WebApi\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+E:\Gateway Projects\Microservice.WebApi\Gateway.WebApi\bin\Debug\netcoreapp3.1\Gateway.WebApi.exe
+E:\Gateway Projects\Microservice.WebApi\Gateway.WebApi\bin\Debug\netcoreapp3.1\ocelot.json
+E:\Gateway Projects\Microservice.WebApi\Gateway.WebApi\bin\Debug\netcoreapp3.1\Gateway.WebApi.deps.json
+E:\Gateway Projects\Microservice.WebApi\Gateway.WebApi\bin\Debug\netcoreapp3.1\Gateway.WebApi.runtimeconfig.json
+E:\Gateway Projects\Microservice.WebApi\Gateway.WebApi\bin\Debug\netcoreapp3.1\Gateway.WebApi.runtimeconfig.dev.json
+E:\Gateway Projects\Microservice.WebApi\Gateway.WebApi\bin\Debug\netcoreapp3.1\Gateway.WebApi.dll
+E:\Gateway Projects\Microservice.WebApi\Gateway.WebApi\bin\Debug\netcoreapp3.1\Gateway.WebApi.pdb
+E:\Gateway Projects\Microservice.WebApi\Gateway.WebApi\bin\Debug\netcoreapp3.1\FluentValidation.dll
+E:\Gateway Projects\Microservice.WebApi\Gateway.WebApi\bin\Debug\netcoreapp3.1\Flurl.dll
+E:\Gateway Projects\Microservice.WebApi\Gateway.WebApi\bin\Debug\netcoreapp3.1\Flurl.Http.dll
+E:\Gateway Projects\Microservice.WebApi\Gateway.WebApi\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+E:\Gateway Projects\Microservice.WebApi\Gateway.WebApi\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.MiddlewareAnalysis.dll
+E:\Gateway Projects\Microservice.WebApi\Gateway.WebApi\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+E:\Gateway Projects\Microservice.WebApi\Gateway.WebApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\Gateway Projects\Microservice.WebApi\Gateway.WebApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DiagnosticAdapter.dll
+E:\Gateway Projects\Microservice.WebApi\Gateway.WebApi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\Gateway Projects\Microservice.WebApi\Gateway.WebApi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+E:\Gateway Projects\Microservice.WebApi\Gateway.WebApi\bin\Debug\netcoreapp3.1\Ocelot.dll
+E:\Gateway Projects\Microservice.WebApi\Gateway.WebApi\obj\Debug\netcoreapp3.1\Gateway.WebApi.csprojAssemblyReference.cache
+E:\Gateway Projects\Microservice.WebApi\Gateway.WebApi\obj\Debug\netcoreapp3.1\Gateway.WebApi.AssemblyInfoInputs.cache
+E:\Gateway Projects\Microservice.WebApi\Gateway.WebApi\obj\Debug\netcoreapp3.1\Gateway.WebApi.AssemblyInfo.cs
+E:\Gateway Projects\Microservice.WebApi\Gateway.WebApi\obj\Debug\netcoreapp3.1\Gateway.WebApi.csproj.CoreCompileInputs.cache
+E:\Gateway Projects\Microservice.WebApi\Gateway.WebApi\obj\Debug\netcoreapp3.1\Gateway.WebApi.MvcApplicationPartsAssemblyInfo.cs
+E:\Gateway Projects\Microservice.WebApi\Gateway.WebApi\obj\Debug\netcoreapp3.1\Gateway.WebApi.MvcApplicationPartsAssemblyInfo.cache
+E:\Gateway Projects\Microservice.WebApi\Gateway.WebApi\obj\Debug\netcoreapp3.1\Gateway.WebApi.RazorTargetAssemblyInfo.cache
+E:\Gateway Projects\Microservice.WebApi\Gateway.WebApi\obj\Debug\netcoreapp3.1\Gateway.WebApi.csproj.CopyComplete
+E:\Gateway Projects\Microservice.WebApi\Gateway.WebApi\obj\Debug\netcoreapp3.1\staticwebassets\Gateway.WebApi.StaticWebAssets.Manifest.cache
+E:\Gateway Projects\Microservice.WebApi\Gateway.WebApi\obj\Debug\netcoreapp3.1\staticwebassets\Gateway.WebApi.StaticWebAssets.xml
+E:\Gateway Projects\Microservice.WebApi\Gateway.WebApi\obj\Debug\netcoreapp3.1\Gateway.WebApi.dll
+E:\Gateway Projects\Microservice.WebApi\Gateway.WebApi\obj\Debug\netcoreapp3.1\Gateway.WebApi.pdb
+E:\Gateway Projects\Microservice.WebApi\Gateway.WebApi\obj\Debug\netcoreapp3.1\Gateway.WebApi.genruntimeconfig.cache
