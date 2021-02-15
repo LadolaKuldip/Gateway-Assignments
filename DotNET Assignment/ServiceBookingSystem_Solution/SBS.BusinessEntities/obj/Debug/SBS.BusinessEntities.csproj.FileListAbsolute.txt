@@ -1,0 +1,6 @@
+C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\SBS.BusinessEntities\bin\Debug\SBS.BusinessEntities.dll
+C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\SBS.BusinessEntities\bin\Debug\SBS.BusinessEntities.pdb
+C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\SBS.BusinessEntities\obj\Debug\SBS.BusinessEntities.csprojAssemblyReference.cache
+C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\SBS.BusinessEntities\obj\Debug\SBS.BusinessEntities.csproj.CoreCompileInputs.cache
+C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\SBS.BusinessEntities\obj\Debug\SBS.BusinessEntities.dll
+C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\SBS.BusinessEntities\obj\Debug\SBS.BusinessEntities.pdb

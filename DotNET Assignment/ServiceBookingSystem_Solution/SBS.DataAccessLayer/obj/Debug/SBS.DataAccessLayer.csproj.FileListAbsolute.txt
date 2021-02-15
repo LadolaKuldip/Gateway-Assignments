@@ -1,0 +1,16 @@
+C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\SBS.DataAccessLayer\bin\Debug\SBS.DataAccessLayer.dll.config
+C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\SBS.DataAccessLayer\bin\Debug\SBS.DataAccessLayer.dll
+C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\SBS.DataAccessLayer\bin\Debug\SBS.DataAccessLayer.pdb
+C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\SBS.DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\SBS.DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\SBS.DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\SBS.DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\SBS.DataAccessLayer\obj\Debug\SBS.DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\SBS.DataAccessLayer\obj\Debug\SBS.DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\SBS.DataAccessLayer\obj\Debug\SBS.DataAccessLayer.csproj.CopyComplete
+C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\SBS.DataAccessLayer\obj\Debug\SBS.DataAccessLayer.dll
+C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\SBS.DataAccessLayer\obj\Debug\SBS.DataAccessLayer.pdb
+C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\SBS.DataAccessLayer\bin\Debug\SBS.BusinessEntities.dll
+C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\SBS.DataAccessLayer\bin\Debug\SBS.BusinessEntities.pdb
+C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\SBS.DataAccessLayer\bin\Debug\AutoMapper.dll
+C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\SBS.DataAccessLayer\bin\Debug\AutoMapper.xml

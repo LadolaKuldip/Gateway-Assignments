@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="72b1091333c94f849e25c2323cf6853a" Name="Diagram1">
+        <EntityTypeShape EntityType="ServiceBookingSystemModel.Appointment" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiceBookingSystemModel.CustomerDealerMap" Width="1.5" PointX="6" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiceBookingSystemModel.Customer" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiceBookingSystemModel.Dealer" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiceBookingSystemModel.Manufacturer" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiceBookingSystemModel.Mechanic" Width="1.5" PointX="0.75" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiceBookingSystemModel.Service" Width="1.5" PointX="0.75" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiceBookingSystemModel.Vehicle" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <AssociationConnector Association="ServiceBookingSystemModel.FK_Appointments_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiceBookingSystemModel.FK_Appointments_Dealers" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiceBookingSystemModel.FK_Appointments_Mechanics" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiceBookingSystemModel.FK_Appointments_Services" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiceBookingSystemModel.FK_Appointments_Vehicles" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiceBookingSystemModel.FK_CustomerDealerMap_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiceBookingSystemModel.FK_CustomerDealerMap_Dealers" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiceBookingSystemModel.FK_Vehicles_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiceBookingSystemModel.FK_Mechanics_Manufacturers" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiceBookingSystemModel.FK_Vehicles_Manufacturers" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
