@@ -117,13 +117,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>
-    <ProjectReference Include="..\SBS.BusinessEntities\SBS.BusinessEntities.csproj">
-      <Project>{9ea3ef88-9c00-4c6f-8c20-fb3f10f1e402}</Project>
-      <Name>SBS.BusinessEntities</Name>
-    </ProjectReference>
-  </ItemGroup>
   <ItemGroup>
     <Content Include="Database\SBSContext.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -135,6 +128,12 @@
       <DependentUpon>SBSContext.edmx</DependentUpon>
       <LastGenOutput>SBSContext.cs</LastGenOutput>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SBS.BusinessEntities\SBS.BusinessEntities.csproj">
+      <Project>{9ea3ef88-9c00-4c6f-8c20-fb3f10f1e402}</Project>
+      <Name>SBS.BusinessEntities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -12,6 +12,7 @@
     <Property Name="AppointmentDate" Type="datetime" Nullable="false" />
     <Property Name="ServiceId" Type="int" Nullable="false" />
     <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="CustomerDealerMap">
     <Key>
@@ -72,7 +73,7 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Price" Type="decimal" Precision="7" Scale="2" Nullable="false" />
-    <Property Name="Time" Type="datetime" Nullable="false" />
+    <Property Name="Time" Type="time" Precision="4" Nullable="false" />
     <Property Name="Active" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="Vehicles">
@@ -95,55 +96,7 @@
         <PropertyRef Name="Id" />
       </Principal>
       <Dependent Role="Appointments">
-        <PropertyRef Name="CustomerId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Appointments_Dealers">
-    <End Role="Dealers" Type="Self.Dealers" Multiplicity="1" />
-    <End Role="Appointments" Type="Self.Appointments" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Dealers">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Appointments">
-        <PropertyRef Name="DealerId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Appointments_Mechanics">
-    <End Role="Mechanics" Type="Self.Mechanics" Multiplicity="1" />
-    <End Role="Appointments" Type="Self.Appointments" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Mechanics">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Appointments">
-        <PropertyRef Name="MechanicId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Appointments_Services">
-    <End Role="Services" Type="Self.Services" Multiplicity="1" />
-    <End Role="Appointments" Type="Self.Appointments" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Services">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Appointments">
-        <PropertyRef Name="ServiceId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Appointments_Vehicles">
-    <End Role="Vehicles" Type="Self.Vehicles" Multiplicity="1" />
-    <End Role="Appointments" Type="Self.Appointments" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Vehicles">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Appointments">
-        <PropertyRef Name="VehicleId" />
+        <PropertyRef Name="UpdatedBy" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -218,22 +171,6 @@
     <EntitySet Name="Vehicles" EntityType="Self.Vehicles" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_Appointments_Customers" Association="Self.FK_Appointments_Customers">
       <End Role="Customers" EntitySet="Customers" />
-      <End Role="Appointments" EntitySet="Appointments" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Appointments_Dealers" Association="Self.FK_Appointments_Dealers">
-      <End Role="Dealers" EntitySet="Dealers" />
-      <End Role="Appointments" EntitySet="Appointments" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Appointments_Mechanics" Association="Self.FK_Appointments_Mechanics">
-      <End Role="Mechanics" EntitySet="Mechanics" />
-      <End Role="Appointments" EntitySet="Appointments" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Appointments_Services" Association="Self.FK_Appointments_Services">
-      <End Role="Services" EntitySet="Services" />
-      <End Role="Appointments" EntitySet="Appointments" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Appointments_Vehicles" Association="Self.FK_Appointments_Vehicles">
-      <End Role="Vehicles" EntitySet="Vehicles" />
       <End Role="Appointments" EntitySet="Appointments" />
     </AssociationSet>
     <AssociationSet Name="FK_CustomerDealerMap_Customers" Association="Self.FK_CustomerDealerMap_Customers">

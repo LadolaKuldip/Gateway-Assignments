@@ -17,7 +17,6 @@ namespace SBS.DataAccessLayer.Database
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Dealer()
         {
-            this.Appointments = new HashSet<Appointment>();
             this.CustomerDealerMaps = new HashSet<CustomerDealerMap>();
         }
     
@@ -29,8 +28,6 @@ namespace SBS.DataAccessLayer.Database
         public string EmailId { get; set; }
         public string MobileNumber { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Appointment> Appointments { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CustomerDealerMap> CustomerDealerMaps { get; set; }
     }

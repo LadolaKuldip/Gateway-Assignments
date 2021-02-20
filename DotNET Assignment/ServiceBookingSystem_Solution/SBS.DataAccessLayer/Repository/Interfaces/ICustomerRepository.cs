@@ -10,6 +10,8 @@ namespace SBS.DataAccessLayer.Repository.Interfaces
     public interface ICustomerRepository
     {
         string Register(Customer customer);
-        bool Login(string email, string password);
+        int Login(string email, string password);
+
+        IEnumerable<Customer> GetCustomers();
     }
 }

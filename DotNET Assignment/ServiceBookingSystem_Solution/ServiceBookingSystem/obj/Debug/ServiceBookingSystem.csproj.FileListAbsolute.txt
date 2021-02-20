@@ -125,3 +125,5 @@ C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\ServiceBookingSystem\
 C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\ServiceBookingSystem\bin\AutoMapper.xml
 C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\ServiceBookingSystem\bin\EntityFramework.SqlServer.dll
 C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\ServiceBookingSystem\bin\EntityFramework.SqlServer.xml
+C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\ServiceBookingSystem\bin\SBS.Common.dll
+C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\ServiceBookingSystem\bin\SBS.Common.pdb

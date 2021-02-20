@@ -14,19 +14,10 @@ namespace SBS.DataAccessLayer.Database
     
     public partial class Service
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Service()
-        {
-            this.Appointments = new HashSet<Appointment>();
-        }
-    
         public int Id { get; set; }
         public string Name { get; set; }
         public decimal Price { get; set; }
-        public System.DateTime Time { get; set; }
+        public System.TimeSpan Time { get; set; }
         public bool Active { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Appointment> Appointments { get; set; }
     }
 }

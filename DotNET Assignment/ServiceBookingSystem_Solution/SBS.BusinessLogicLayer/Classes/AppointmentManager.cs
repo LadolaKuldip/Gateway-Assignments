@@ -1,5 +1,6 @@
 ﻿using SBS.BusinessEntities;
 using SBS.BusinessLogicLayer.Interfaces;
+using SBS.DataAccessLayer.Repository.Classes;
 using SBS.DataAccessLayer.Repository.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,9 @@ namespace SBS.BusinessLogicLayer.Classes
         }
         public string Create(Appointment appoinement)
         {
+            SupportRepository support = new SupportRepository();
+            appoinement.MechanicId = support.GetMechanics(appoinement.Vehicle.Manufacturer.Name).Id;
+            appoinement.UpdatedBy = appoinement.CustomerId;
             return _appointmentRepository.Create(appoinement);
         }
 
@@ -26,6 +30,10 @@ namespace SBS.BusinessLogicLayer.Classes
             return _appointmentRepository.Delete(appointmentId);
         }
 
+        public IEnumerable<Appointment> GetAppointments(int customerId)
+        {
+            return _appointmentRepository.GetAppointments(customerId);
+        }
         public IEnumerable<Appointment> GetAppointments()
         {
             return _appointmentRepository.GetAppointments();
@@ -38,12 +46,19 @@ namespace SBS.BusinessLogicLayer.Classes
 
         public string Update(Appointment appointment)
         {
+            SupportRepository support = new SupportRepository();
+            appointment.MechanicId = support.GetMechanics(appointment.Vehicle.Manufacturer.Name).Id;
             return _appointmentRepository.Update(appointment);
         }
 
         public string UpdateStatus(int appointmentId, bool status)
         {
             return _appointmentRepository.UpdateStatus(appointmentId, status);
+        }
+
+        public Appointment GetAppointment(int Id)
+        {
+            return _appointmentRepository.GetAppointment(Id);
         }
     }
 }

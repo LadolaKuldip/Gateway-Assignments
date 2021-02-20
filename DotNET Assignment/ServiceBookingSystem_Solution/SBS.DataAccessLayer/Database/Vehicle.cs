@@ -14,12 +14,6 @@ namespace SBS.DataAccessLayer.Database
     
     public partial class Vehicle
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Vehicle()
-        {
-            this.Appointments = new HashSet<Appointment>();
-        }
-    
         public int Id { get; set; }
         public string LicensePlate { get; set; }
         public string Model { get; set; }
@@ -28,8 +22,6 @@ namespace SBS.DataAccessLayer.Database
         public int CustomerId { get; set; }
         public int ManufacturerId { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Appointment> Appointments { get; set; }
         public virtual Customer Customer { get; set; }
         public virtual Manufacturer Manufacturer { get; set; }
     }

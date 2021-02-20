@@ -7,6 +7,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 
 namespace SBS.DataAccessLayer.Repository.Classes
 {
@@ -18,15 +19,15 @@ namespace SBS.DataAccessLayer.Repository.Classes
         {
             _dbContext = new Database.ServiceBookingSystemEntities();
         }
-        public bool Login(string email, string password)
+        public int Login(string email, string password)
         {
             Database.Customer customer = _dbContext.Customers.Where(user => user.EmailId.Equals(email) 
                                            && user.Password == password).FirstOrDefault();
             if (customer != null)
             {
-                return true;
+                return customer.Id;
             }
-            return false;
+            return 0;
         }
 
         public string Register(Customer customer)
@@ -41,7 +42,6 @@ namespace SBS.DataAccessLayer.Repository.Classes
                         return "already";
                     }
                     Database.Customer entity = new Database.Customer();
-                    customer.Password = Convert.ToBase64String(Encrypt(customer.Password));
 
                     entity = AutoMapperConfig.CustomerToDbCustomerMapper.Map<Database.Customer>(customer);
 
@@ -57,26 +57,30 @@ namespace SBS.DataAccessLayer.Repository.Classes
             }
         }
 
-        private readonly string EncryptionKey = "ServiceBooking@123";
-
-        private byte[] Encrypt(string password)
+        public IEnumerable<Customer> GetCustomers()
         {
-            var key = GetKey(EncryptionKey);
-            using(var aes = Aes.Create())
-            using(var encryptor = aes.CreateEncryptor(key, key))
+            List<Customer> customersReturn = new List<Customer>();
+            IEnumerable<Database.Customer> customers = _dbContext.Customers.ToList();
+
+            var config = new MapperConfiguration(cfg =>
             {
-                var plainText = Encoding.UTF8.GetBytes(password);
-                return encryptor.TransformFinalBlock(plainText, 0, plainText.Length);
+                cfg.CreateMap<Database.Customer, Customer>();
+            });
+            config.AssertConfigurationIsValid();
+
+            var mapper = config.CreateMapper();
+
+            foreach (var customer in customers)
+            {
+                Customer entity = new Customer();
+                entity = mapper.Map<Database.Customer, Customer>(customer);
+
+                customersReturn.Add(entity);
             }
+
+            return customersReturn;
         }
 
-        private byte[] GetKey(string key)
-        {
-            var keyBytes = Encoding.UTF8.GetBytes(key);
-            using(var md5 = MD5.Create())
-            {
-                return md5.ComputeHash(keyBytes);
-            }
-        }
+
     }
 }

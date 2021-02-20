@@ -12,5 +12,6 @@ namespace SBS.BusinessLogicLayer.Interfaces
         IEnumerable<Dealer> GetDealers();
         IEnumerable<Manufacturer> GetManufacturers();
         IEnumerable<Service> GetServices();
+        Mechanic GetMechanics(string Make);
     }
 }

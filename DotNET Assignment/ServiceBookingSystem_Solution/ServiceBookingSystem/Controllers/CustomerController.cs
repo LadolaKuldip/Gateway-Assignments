@@ -18,7 +18,7 @@ namespace ServiceBookingSystem.Controllers
         }
 
         [HttpPost]
-        [Route("api/Customer")]
+        [Route("Account/Register")]
         // POST: api/Customer
         public IHttpActionResult Register([FromBody]Customer customer)
         {
@@ -34,5 +34,24 @@ namespace ServiceBookingSystem.Controllers
             return Ok();
         }
 
+        [HttpGet]
+        [Authorize]
+        [Route("Account/Login")]
+        public IHttpActionResult Login()
+        {
+            return Ok();
+        }
+
+        [HttpGet]
+        [Route("Customer/Get")]
+        public IHttpActionResult GetCustomers()
+        {
+            var response = _customerManager.GetCustomers();
+            if (response == null)
+            {
+                return InternalServerError();
+            }
+            return Ok(response);
+        }
     }
 }

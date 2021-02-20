@@ -77,3 +77,9 @@ C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\SBS.ViewLayer\obj\Deb
 C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\SBS.ViewLayer\obj\Debug\SBS.ViewLayer.csproj.CopyComplete
 C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\SBS.ViewLayer\obj\Debug\SBS.ViewLayer.dll
 C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\SBS.ViewLayer\obj\Debug\SBS.ViewLayer.pdb
+C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\SBS.ViewLayer\bin\SBS.BusinessEntities.dll
+C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\SBS.ViewLayer\bin\SBS.Common.dll
+C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\SBS.ViewLayer\bin\System.Net.Http.Formatting.dll
+C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\SBS.ViewLayer\bin\SBS.BusinessEntities.pdb
+C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\SBS.ViewLayer\bin\SBS.Common.pdb
+C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\SBS.ViewLayer\bin\System.Net.Http.Formatting.xml

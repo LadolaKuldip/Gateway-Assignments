@@ -1,4 +1,5 @@
-﻿using SBS.BusinessEntities;
+﻿using AutoMapper;
+using SBS.BusinessEntities;
 using SBS.DataAccessLayer.Repository.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -30,7 +31,7 @@ namespace SBS.DataAccessLayer.Repository.Classes
                         return "already";
                     }
                     Database.Appointment entity = new Database.Appointment();
-
+                    appoinement.Vehicle = null;
                     entity = AutoMapperConfig.AppointmentToDbAppointmentMapper.Map<Database.Appointment>(appoinement);
 
                     _dbContext.Appointments.Add(entity);
@@ -68,16 +69,63 @@ namespace SBS.DataAccessLayer.Repository.Classes
             }
         }
 
-        public IEnumerable<Appointment> GetAppointments()
+        public IEnumerable<Appointment> GetAppointments(int customerId)
         {
             List<Appointment> appointmentsReturn = new List<Appointment>();
-            var appointments = _dbContext.Appointments.ToList();
+            var appointments = _dbContext.Appointments.Include("Customer").Include("Dealer").Include("Mechanic").Include("Service").Include("Vehicle").Where(x => x.CustomerId == customerId).ToList();
+
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<Database.Appointment, Appointment>();
+                cfg.CreateMap<Database.Customer, Customer>();
+                cfg.CreateMap<Database.Dealer, Dealer>();
+                cfg.CreateMap<Database.Mechanic, Mechanic>();
+                cfg.CreateMap<Database.Service, Service>();
+                cfg.CreateMap<Database.Vehicle, Vehicle>();
+                cfg.CreateMap<Database.Manufacturer, Manufacturer>();
+            });
+            config.AssertConfigurationIsValid();
+
+            var mapper = config.CreateMapper();
             if (appointments.Any())
             {
                 foreach (var appointment in appointments)
                 {
                     Appointment entity = new Appointment();
-                    entity = AutoMapperConfig.DbAppointmentToAppointmentMapper.Map<Appointment>(appointment);
+                    entity = mapper.Map<Database.Appointment, Appointment>(appointment);
+
+                    appointmentsReturn.Add(entity);
+                }
+                return appointmentsReturn;
+            }
+            return new List<Appointment>();
+        }
+
+        public IEnumerable<Appointment> GetAppointments()
+        {
+            List<Appointment> appointmentsReturn = new List<Appointment>();
+            
+            var appointments = _dbContext.Appointments.Include("Customer").Include("Dealer").Include("Mechanic").Include("Service").Include("Vehicle").ToList();
+
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<Database.Appointment, Appointment>();
+                cfg.CreateMap<Database.Customer, Customer>();
+                cfg.CreateMap<Database.Dealer, Dealer>();
+                cfg.CreateMap<Database.Mechanic, Mechanic>();
+                cfg.CreateMap<Database.Service, Service>();
+                cfg.CreateMap<Database.Vehicle, Vehicle>();
+                cfg.CreateMap<Database.Manufacturer, Manufacturer>();
+            });
+            config.AssertConfigurationIsValid();
+
+            var mapper = config.CreateMapper();
+            if (appointments.Any())
+            {
+                foreach (var appointment in appointments)
+                {
+                    Appointment entity = new Appointment();
+                    entity = mapper.Map<Database.Appointment, Appointment>(appointment);
 
                     appointmentsReturn.Add(entity);
                 }
@@ -144,11 +192,13 @@ namespace SBS.DataAccessLayer.Repository.Classes
                     if (status == true)
                     {
                         appointment.Status = 1;
+                        _dbContext.SaveChanges();
                         return "updated";
                     }
                     else
                     {
                         appointment.Status = -1;
+                        _dbContext.SaveChanges();
                         return "updated";
                     }
                 }
@@ -160,6 +210,34 @@ namespace SBS.DataAccessLayer.Repository.Classes
                 Debug.WriteLine(ex.Message);
                 return "null";
             }
+        }
+
+        public Appointment GetAppointment(int Id)
+        {
+            Appointment appointment = null;
+            Database.Appointment entity = _dbContext.Appointments.Include("Customer").Include("Dealer").Include("Mechanic").Include("Service").Include("Vehicle").FirstOrDefault(x => x.Id == Id);
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<Database.Appointment, Appointment>();
+                cfg.CreateMap<Database.Customer, Customer>();
+                cfg.CreateMap<Database.Dealer, Dealer>();
+                cfg.CreateMap<Database.Mechanic, Mechanic>();
+                cfg.CreateMap<Database.Service, Service>();
+                cfg.CreateMap<Database.Vehicle, Vehicle>();
+                cfg.CreateMap<Database.Manufacturer, Manufacturer>();
+            });
+            config.AssertConfigurationIsValid();
+
+            var mapper = config.CreateMapper();
+            if (entity != null)
+            {
+                appointment = mapper.Map<Database.Appointment, Appointment>(entity);
+            }
+            else
+            {
+                appointment = new Appointment();
+            }
+            return appointment;
         }
     }
 }

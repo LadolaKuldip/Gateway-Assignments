@@ -20,6 +20,7 @@ namespace SBS.DataAccessLayer.Repository
             
         public static Mapper DbVehicleToVehicleMapper = new Mapper(new MapperConfiguration(cfg => {
             cfg.CreateMap<Database.Vehicle, Vehicle>();
+            cfg.CreateMap<Database.Manufacturer, Manufacturer>();
         }));
 
         public static Mapper DbDealerToDealerMapper = new Mapper(new MapperConfiguration(cfg => {

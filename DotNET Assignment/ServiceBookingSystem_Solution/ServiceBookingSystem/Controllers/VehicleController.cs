@@ -1,4 +1,5 @@
-﻿using SBS.BusinessEntities;
+﻿using Microsoft.AspNet.Identity;
+using SBS.BusinessEntities;
 using SBS.BusinessLogicLayer.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -6,6 +7,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Security.Claims;
+using System.Web;
 using System.Web.Http;
 
 namespace ServiceBookingSystem.Controllers
@@ -83,6 +85,8 @@ namespace ServiceBookingSystem.Controllers
         [Route("GetById")]
         public IHttpActionResult GetVehicles()
         {
+            string userId = HttpContext.Current.User.Identity.GetUserId();
+            return Ok(userId);
             var identity = (ClaimsIdentity)User.Identity;
             int customerId = int.Parse(identity.Claims.FirstOrDefault(c => c.Type == "UserId").Value);
             var response = _vehicleManager.GetVehicles(customerId);
@@ -90,7 +94,18 @@ namespace ServiceBookingSystem.Controllers
             {
                 return InternalServerError();
             }
-            //Debug.WriteLine("User ID: " + name);
+            return Ok(response);
+        }
+
+        [HttpGet]
+        [Route("GetByCustomer/{id}")]
+        public IHttpActionResult GetVehiclesByCustomer(int id)
+        {
+            var response = _vehicleManager.GetVehicles(id);
+            if (response == null)
+            {
+                return InternalServerError();
+            }
             return Ok(response);
         }
     }

@@ -16,5 +16,7 @@ namespace SBS.BusinessEntities
         public int CustomerId { get; set; }
         public int ManufacturerId { get; set; }
 
+        public virtual Customer Customer { get; set; }
+        public virtual Manufacturer Manufacturer { get; set; }
     }
 }

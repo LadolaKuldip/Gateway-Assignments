@@ -22,11 +22,8 @@ namespace SBS.DataAccessLayer.Database
         public System.DateTime AppointmentDate { get; set; }
         public int ServiceId { get; set; }
         public int Status { get; set; }
+        public int UpdatedBy { get; set; }
     
         public virtual Customer Customer { get; set; }
-        public virtual Dealer Dealer { get; set; }
-        public virtual Mechanic Mechanic { get; set; }
-        public virtual Service Service { get; set; }
-        public virtual Vehicle Vehicle { get; set; }
     }
 }

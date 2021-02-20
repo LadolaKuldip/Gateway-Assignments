@@ -11,7 +11,7 @@ namespace SBS.BusinessEntities
         public int Id { get; set; }
         public string Name { get; set; }
         public decimal Price { get; set; }
-        public System.DateTime Time { get; set; }
+        public System.TimeSpan Time { get; set; }
         public bool Active { get; set; }
     }
 }

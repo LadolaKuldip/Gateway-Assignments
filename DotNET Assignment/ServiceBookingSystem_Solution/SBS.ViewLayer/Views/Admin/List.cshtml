@@ -1,0 +1,109 @@
+﻿@model IEnumerable<SBS.BusinessEntities.Appointment>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DealerId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MechanicId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VehicleId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AppointmentDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ServiceId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dealer.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mechanic.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vehicle.LicensePlate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AppointmentDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Service.Name)
+            </td>
+            <td>
+                @if (item.Status == 0)
+                {
+                    <p style="color: dodgerblue;font-weight: bold">Pending</p>
+                }
+                @if (item.Status == 1)
+                {
+                    <p style="color: limegreen;font-weight: bold">Approved</p>
+                }
+                @if (item.Status == -1)
+                {
+                    <p style="color: red;font-weight: bold">Rejected</p>
+                }
+            </td>
+            
+            <td>
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })*@
+                <button class="btn btn-success" id="@item.Id" onclick="myFunc(this.id);">
+                    Approve
+                </button> |
+                <button class="btn btn-danger" id="@item.Id" onclick="myFuncReject(this.id);">
+                    Reject
+                </button>
+
+            </td>
+        </tr>
+    }
+
+</table>
+
+<div id="dynamic-modal">
+</div>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.9/jquery-ui.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    function myFunc(id) {
+        
+        $.ajax({
+            url: "/Admin/UpdateStatus?id=" + id + "&status=" + 1,
+            dataType: "JSON",
+            contentType: "application/json; charset=utf-8",
+            type: "GET",
+            success: function () {
+                window.location = "Admin";
+            }
+        });
+    }
+    function myFuncReject(id) {
+        
+        $.ajax({
+            url: "/Admin/UpdateStatus?id=" + id + "&status=" + -1,
+            dataType: "JSON",
+            contentType: "application/json; charset=utf-8",
+            type: "GET",
+            success: function () {
+                window.location = "Admin";
+        });
+    }
+</script>

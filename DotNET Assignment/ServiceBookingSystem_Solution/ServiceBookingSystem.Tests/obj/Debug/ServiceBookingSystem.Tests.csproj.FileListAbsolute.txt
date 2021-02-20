@@ -74,3 +74,7 @@ C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\ServiceBookingSystem.
 C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\ServiceBookingSystem.Tests\bin\Debug\Unity.Abstractions.pdb
 C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\ServiceBookingSystem.Tests\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\ServiceBookingSystem.Tests\bin\Debug\AutoMapper.xml
+C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\ServiceBookingSystem.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\ServiceBookingSystem.Tests\bin\Debug\SBS.Common.dll
+C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\ServiceBookingSystem.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Kuldip\source\repos\ServiceBookingSystem_Solution\ServiceBookingSystem.Tests\bin\Debug\SBS.Common.pdb

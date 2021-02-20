@@ -1,4 +1,4 @@
-﻿using SBS.BusinessEntities;
+﻿    using SBS.BusinessEntities;
 using SBS.DataAccessLayer.Repository.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -64,6 +64,17 @@ namespace SBS.DataAccessLayer.Repository.Classes
             }
 
             return services;
+        }
+
+        public Mechanic GetMechanics(string Make)
+        {
+            Database.Mechanic entity = _dbContext.Mechanics.Include("Manufacturer").FirstOrDefault(x => x.Manufacturer.Name == Make);
+            Mechanic mechanic = new Mechanic();
+            mechanic.Id = entity.Id;
+            mechanic.Name = entity.Name;
+            mechanic.MobileNumber = entity.MobileNumber;
+            mechanic.EmailId = entity.EmailId;
+            return mechanic;
         }
     }
 }

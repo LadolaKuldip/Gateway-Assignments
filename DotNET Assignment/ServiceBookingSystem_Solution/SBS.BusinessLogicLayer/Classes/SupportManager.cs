@@ -26,6 +26,11 @@ namespace SBS.BusinessLogicLayer.Classes
             return _supportRepository.GetManufacturers();
         }
 
+        public Mechanic GetMechanics(string Make)
+        {
+            return _supportRepository.GetMechanics(Make);
+        }
+
         public IEnumerable<Service> GetServices()
         {
             return _supportRepository.GetServices();

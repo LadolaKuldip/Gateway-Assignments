@@ -1,4 +1,5 @@
-﻿using SBS.BusinessEntities;
+﻿using AutoMapper;
+using SBS.BusinessEntities;
 using SBS.DataAccessLayer.Repository.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -65,13 +66,24 @@ namespace SBS.DataAccessLayer.Repository.Classes
         public IEnumerable<Vehicle> GetVehicles()
         {
             List<Vehicle> vehicles = new List<Vehicle>();
-            IEnumerable<Database.Vehicle> entities = _dbContext.Vehicles.ToList();
+            IEnumerable<Database.Vehicle> entities = _dbContext.Vehicles.Include("Manufacturer").Include("Customer").ToList();
+
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<Database.Vehicle, Vehicle>();
+                cfg.CreateMap<Database.Manufacturer, Manufacturer>();
+                cfg.CreateMap<Database.Customer, Customer>();
+            });
+            config.AssertConfigurationIsValid();
+
+            var mapper = config.CreateMapper();
+
             if (entities != null)
             {
                 foreach (var item in entities)
                 {
                     Vehicle vehicle = new Vehicle();
-                    vehicle = AutoMapperConfig.DbVehicleToVehicleMapper.Map<Vehicle>(item);
+                    vehicle = mapper.Map<Database.Vehicle, Vehicle>(item);
                     vehicles.Add(vehicle);
                 }
             }
@@ -82,13 +94,24 @@ namespace SBS.DataAccessLayer.Repository.Classes
         public IEnumerable<Vehicle> GetVehicles(int customerId)
         {
             List<Vehicle> vehicles = new List<Vehicle>();
-            IEnumerable<Database.Vehicle> entities = _dbContext.Vehicles.Where(x => x.CustomerId == customerId).ToList();
+            IEnumerable<Database.Vehicle> entities = _dbContext.Vehicles.Include("Manufacturer").Include("Customer").Where(x => x.CustomerId == customerId).ToList();
+
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<Database.Vehicle, Vehicle>();
+                cfg.CreateMap<Database.Manufacturer, Manufacturer>();
+                cfg.CreateMap<Database.Customer, Customer>();
+            });
+            config.AssertConfigurationIsValid();
+
+            var mapper = config.CreateMapper();
             if (entities != null)
             {
                 foreach (var item in entities)
                 {
                     Vehicle vehicle = new Vehicle();
-                    vehicle = AutoMapperConfig.DbVehicleToVehicleMapper.Map<Vehicle>(item);
+                    vehicle = mapper.Map<Database.Vehicle, Vehicle>(item);
+
                     vehicles.Add(vehicle);
                 }
             }

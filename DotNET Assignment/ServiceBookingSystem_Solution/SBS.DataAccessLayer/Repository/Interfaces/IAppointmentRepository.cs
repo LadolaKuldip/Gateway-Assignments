@@ -11,10 +11,12 @@ namespace SBS.DataAccessLayer.Repository.Interfaces
     {
         string Create(Appointment appoinement);
         string Delete(int appointmentId);
+        IEnumerable<Appointment> GetAppointments(int customerId);
         IEnumerable<Appointment> GetAppointments();
         IEnumerable<Appointment> GetAppointments(DateTime startingDate, DateTime EndingDate);
         string Update(Appointment appointment);
         string UpdateStatus(int appointmentId, bool status);
+        Appointment GetAppointment(int Id);
 
     }
 }
