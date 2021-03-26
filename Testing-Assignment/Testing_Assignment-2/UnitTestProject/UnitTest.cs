@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Testing_Assignment_2;
 
 namespace UnitTestProject
 {
@@ -15,7 +16,7 @@ namespace UnitTestProject
             inputString = "Unit Test";
             expected = "uNIT tEST";
             //Act
-            string output = Testing_Assignment_2.ExtensionMethods.StringConvert(inputString, "UppartoLower");
+            string output = inputString.UppartoLower();
 
             //Assert
             Assert.AreEqual(expected ,output);
@@ -25,10 +26,10 @@ namespace UnitTestProject
         public void TitleCase()
         {
             //Arrange
-            inputString = "unit TEST";
+            inputString = "unit test";
             expected = "Unit Test";
             //Act
-            string output = Testing_Assignment_2.ExtensionMethods.StringConvert(inputString, "TitleCase");
+            string output = inputString.TitleCase();
 
             //Assert
             Assert.AreEqual(expected, output);
@@ -41,7 +42,7 @@ namespace UnitTestProject
             inputString = "unit test";
             expected = "Unit Test";
             //Act
-            string output = Testing_Assignment_2.ExtensionMethods.StringConvert(inputString, "Capitalized");
+            string output = inputString.Capitalized();
 
             //Assert
             Assert.AreEqual(expected, output);
@@ -51,10 +52,10 @@ namespace UnitTestProject
         public void CheckLower()
         {
             //Arrange
-            inputString = "unit test";
-            expected = "lowerCase";
+            inputString = "unittest";
+            expected = "Success";
             //Act
-            string output = Testing_Assignment_2.ExtensionMethods.StringConvert(inputString, "CheckLower");
+            string output = inputString.CheckLower();
 
             //Assert
             Assert.AreEqual(expected, output);
@@ -64,10 +65,10 @@ namespace UnitTestProject
         public void CheckUppar()
         {
             //Arrange
-            inputString = "UNIT TEST";
-            expected = "upparCase";
+            inputString = "UNITTEST";
+            expected = "Success";
             //Act
-            string output = Testing_Assignment_2.ExtensionMethods.StringConvert(inputString, "CheckUppar");
+            string output = inputString.CheckUppar();
 
             //Assert
             Assert.AreEqual(expected, output);
@@ -80,7 +81,7 @@ namespace UnitTestProject
             inputString = "100";
             expected = "Success";
             //Act
-            string output = Testing_Assignment_2.ExtensionMethods.StringConvert(inputString, "CheckforInt");
+            string output = inputString.CheckforInt();
 
             //Assert
             Assert.AreEqual(expected, output);
@@ -93,7 +94,7 @@ namespace UnitTestProject
             inputString = "Unit Test";
             expected = "Unit Tes";
             //Act
-            string output = Testing_Assignment_2.ExtensionMethods.StringConvert(inputString, "RemoveLastChar");
+            string output = inputString.RemoveLastChar();
 
             //Assert
             Assert.AreEqual(expected, output);
@@ -106,7 +107,7 @@ namespace UnitTestProject
             inputString = "Unit Test";
             expected = "2";
             //Act
-            string output = Testing_Assignment_2.ExtensionMethods.StringConvert(inputString, "WordCount");
+            string output = inputString.WordCount();
 
             //Assert
             Assert.AreEqual(expected, output);
@@ -120,7 +121,7 @@ namespace UnitTestProject
             inputString = "100";
             expected = "100";
             //Act
-            string output = Testing_Assignment_2.ExtensionMethods.StringConvert(inputString, "StringToInt");
+            string output = inputString.StringToInt();
 
             //Assert
             Assert.AreEqual(expected, output);
