@@ -1,28 +1,26 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Testing_Assignment_2;
-
+﻿using Testing_Assignment_2;
+using Xunit;
 namespace UnitTestProject
 {
-    [TestClass]
+
     public class UnitTest
     {
         string inputString = "";
         string expected = "";
-        [TestMethod]
-        public void UppartoLower()
+        [Fact]
+        public void InverseCase()
         {
             //Arrange
             inputString = "Unit Test";
             expected = "uNIT tEST";
             //Act
-            string output = inputString.UppartoLower();
+            string output = inputString.InverseCase();
 
             //Assert
-            Assert.AreEqual(expected ,output);
+            Assert.Equal(expected ,output);
         }
 
-        [TestMethod]
+        [Fact]
         public void TitleCase()
         {
             //Arrange
@@ -32,10 +30,10 @@ namespace UnitTestProject
             string output = inputString.TitleCase();
 
             //Assert
-            Assert.AreEqual(expected, output);
+            Assert.Equal(expected, output);
         }
 
-        [TestMethod]
+        [Fact]
         public void Capitalized()
         {
             //Arrange
@@ -45,10 +43,10 @@ namespace UnitTestProject
             string output = inputString.Capitalized();
 
             //Assert
-            Assert.AreEqual(expected, output);
+            Assert.Equal(expected, output);
         }
 
-        [TestMethod]
+        [Fact]
         public void CheckLower()
         {
             //Arrange
@@ -58,10 +56,10 @@ namespace UnitTestProject
             string output = inputString.CheckLower();
 
             //Assert
-            Assert.AreEqual(expected, output);
+            Assert.Equal(expected, output);
         }
 
-        [TestMethod]
+        [Fact]
         public void CheckUppar()
         {
             //Arrange
@@ -71,10 +69,10 @@ namespace UnitTestProject
             string output = inputString.CheckUppar();
 
             //Assert
-            Assert.AreEqual(expected, output);
+            Assert.Equal(expected, output);
         }
 
-        [TestMethod]
+        [Fact]
         public void CheckforInt()
         {
             //Arrange
@@ -84,10 +82,10 @@ namespace UnitTestProject
             string output = inputString.CheckforInt();
 
             //Assert
-            Assert.AreEqual(expected, output);
+            Assert.Equal(expected, output);
         }
 
-        [TestMethod]
+        [Fact]
         public void RemoveLastChar()
         {
             //Arrange
@@ -97,10 +95,10 @@ namespace UnitTestProject
             string output = inputString.RemoveLastChar();
 
             //Assert
-            Assert.AreEqual(expected, output);
+            Assert.Equal(expected, output);
         }
 
-        [TestMethod]
+        [Fact]
         public void WordCount()
         {
             //Arrange
@@ -110,11 +108,11 @@ namespace UnitTestProject
             string output = inputString.WordCount();
 
             //Assert
-            Assert.AreEqual(expected, output);
+            Assert.Equal(expected, output);
         }
 
 
-        [TestMethod]
+        [Fact]
         public void StringToInt()
         {
             //Arrange
@@ -124,7 +122,7 @@ namespace UnitTestProject
             string output = inputString.StringToInt();
 
             //Assert
-            Assert.AreEqual(expected, output);
+            Assert.Equal(expected, output);
         }
     }
 }

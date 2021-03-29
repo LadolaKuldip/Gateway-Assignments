@@ -15,3 +15,11 @@ C:\Users\Kuldip\source\repos\Testing_Assignment-2\UnitTestProject\obj\Debug\Unit
 C:\Users\Kuldip\source\repos\Testing_Assignment-2\UnitTestProject\obj\Debug\UnitTestProject.csproj.CopyComplete
 C:\Users\Kuldip\source\repos\Testing_Assignment-2\UnitTestProject\obj\Debug\UnitTestProject.dll
 C:\Users\Kuldip\source\repos\Testing_Assignment-2\UnitTestProject\obj\Debug\UnitTestProject.pdb
+C:\Users\Kuldip\source\repos\Testing_Assignment-2\UnitTestProject\bin\Debug\xunit.abstractions.dll
+C:\Users\Kuldip\source\repos\Testing_Assignment-2\UnitTestProject\bin\Debug\xunit.assert.dll
+C:\Users\Kuldip\source\repos\Testing_Assignment-2\UnitTestProject\bin\Debug\xunit.core.dll
+C:\Users\Kuldip\source\repos\Testing_Assignment-2\UnitTestProject\bin\Debug\xunit.execution.desktop.dll
+C:\Users\Kuldip\source\repos\Testing_Assignment-2\UnitTestProject\bin\Debug\xunit.abstractions.xml
+C:\Users\Kuldip\source\repos\Testing_Assignment-2\UnitTestProject\bin\Debug\xunit.assert.xml
+C:\Users\Kuldip\source\repos\Testing_Assignment-2\UnitTestProject\bin\Debug\xunit.core.xml
+C:\Users\Kuldip\source\repos\Testing_Assignment-2\UnitTestProject\bin\Debug\xunit.execution.desktop.xml
