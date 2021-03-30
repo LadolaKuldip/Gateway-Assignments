@@ -10,34 +10,34 @@ namespace Testing_Assignment_2
     {
         static void Main(string[] args)
         {
-            string inputString = Console.ReadLine();
+            string input = Console.ReadLine();
 
             //Case 1
-            Console.WriteLine(inputString.InverseCase());
+            Console.WriteLine("ChangeCase :" + input.ChangeCase());
 
             //Case 2
-            Console.WriteLine(inputString.TitleCase());
+            Console.WriteLine("ConvertTitleCase :" + input.ConvertTitleCase());
 
             //Case 3
-            Console.WriteLine(inputString.Capitalized());
+            Console.WriteLine("ConvertCapitalized :" + input.ConvertCapitalized());
 
             //Case 4
-            Console.WriteLine(inputString.CheckLower());
+            Console.WriteLine("CheckForLower :" + input.CheckForLower());
 
             //Case 5
-            Console.WriteLine(inputString.CheckUppar());
+            Console.WriteLine("CheckForUppar :" + input.CheckForUppar());
 
             //Case 6
-            Console.WriteLine(inputString.CheckforInt());
+            Console.WriteLine("CheckforInt :" + input.CheckforInt());
 
             //Case 7
-            Console.WriteLine(inputString.RemoveLastChar());
+            Console.WriteLine("RemoveLastChar :" + input.RemoveLastChar());
 
             //Case 8
-            Console.WriteLine(inputString.WordCount());
+            Console.WriteLine("WordCount :" + input.WordCount());
 
             //Case 9
-            Console.WriteLine(inputString.StringToInt());
+            Console.WriteLine("StringToInt :" + input.StringToInt());
 
             Console.ReadLine();
         }

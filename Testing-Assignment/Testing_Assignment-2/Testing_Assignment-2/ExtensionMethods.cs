@@ -15,11 +15,11 @@ namespace Testing_Assignment_2
         /// <returns>
         /// The string with inverted case
         /// </returns>
-        public static string InverseCase(this string inputString)
+        public static string ChangeCase(this string input)
         {
             string output = "";
             int ascii = 0;
-            foreach (var ch in inputString)
+            foreach (var ch in input)
             {
                 ascii = (int)ch;
                 if (ascii >= 65 && ascii <= 90)
@@ -37,10 +37,9 @@ namespace Testing_Assignment_2
         /// <returns>
         /// string converted to titlecase
         /// </returns>
-        public static string TitleCase(this string inputString)
+        public static string ConvertTitleCase(this string input)
         {
-            TextInfo textInfo = new CultureInfo("en-us", false).TextInfo;
-            return textInfo.ToTitleCase(inputString);
+            return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(input.ToLower());
         }
 
         /// <summary>
@@ -49,10 +48,9 @@ namespace Testing_Assignment_2
         /// <returns>
         /// string converted to Capitalized
         /// </returns>
-        public static string Capitalized(this string inputString)
+        public static string ConvertCapitalized(this string input)
         {
-            TextInfo textInfo = new CultureInfo("en-us", false).TextInfo;
-            return textInfo.ToTitleCase(inputString);
+            return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(input.ToLower());            
         }
 
         /// <summary>
@@ -61,10 +59,10 @@ namespace Testing_Assignment_2
         /// <returns>
         /// Success if all the characters in the string are lowercase 
         /// </returns>
-        public static string CheckLower(this string inputString)
+        public static string CheckForLower(this string input)
         {
             bool result = true;
-            foreach (var character in inputString)
+            foreach (var character in input)
             {
                 if (char.IsUpper(character))
                 {
@@ -94,10 +92,10 @@ namespace Testing_Assignment_2
         /// <returns>
         /// Success if all the characters in the string are uppercase 
         /// </returns>
-        public static string CheckUppar(this string inputString)
+        public static string CheckForUppar(this string input)
         {
             bool result = true;
-            foreach (var character in inputString)
+            foreach (var character in input)
             {
                 if (char.IsLower(character))
                 {
@@ -127,11 +125,11 @@ namespace Testing_Assignment_2
         /// <returns>
         /// Success if the string can be converted
         /// </returns>
-        public static string CheckforInt(this string inputString)
+        public static string CheckforInt(this string input)
         {
             try
             {
-                int x = int.Parse(inputString);
+                int x = int.Parse(input);
                 return "Success";
             }
             catch (Exception)
@@ -147,9 +145,9 @@ namespace Testing_Assignment_2
         /// <returns>
         /// string with its last character removed
         /// </returns>
-        public static string RemoveLastChar(this string inputString)
+        public static string RemoveLastChar(this string input)
         {
-            return inputString.Substring(0, inputString.Length - 1);
+            return input.Substring(0, input.Length - 1);
         }
 
         /// <summary>
@@ -158,11 +156,11 @@ namespace Testing_Assignment_2
         /// <returns>
         /// The number of words in the given string
         /// </returns>
-        public static string WordCount(this string inputString)
+        public static string WordCount(this string input)
         {
             var wordCount = 0;
-            for (var i = 0; i < inputString.Length; i++)
-                if (inputString[i] == ' ' || i == inputString.Length - 1)
+            for (var i = 0; i < input.Length; i++)
+                if (input[i] == ' ' || i == input.Length - 1)
                     wordCount++;
             return wordCount.ToString();
         }
@@ -173,11 +171,11 @@ namespace Testing_Assignment_2
         /// <returns>
         /// decimal if the given string can be converted, null otherwise
         /// </returns>
-        public static string StringToInt(this string inputString)
+        public static string StringToInt(this string input)
         {
             try
             {
-                return "" + int.Parse(inputString);
+                return "" + int.Parse(input);
             }
             catch (Exception)
             {

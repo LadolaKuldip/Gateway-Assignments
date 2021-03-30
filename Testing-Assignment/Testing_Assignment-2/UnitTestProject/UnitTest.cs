@@ -5,68 +5,69 @@ namespace UnitTestProject
 
     public class UnitTest
     {
-        string inputString = "";
+        string input = "";
         string expected = "";
-        [Fact]
-        public void InverseCase()
+
+        [Theory]
+        [InlineData("TestString", "tESTsTRING")]
+        public void ChangeCase(string input1, string expected1)
         {
             //Arrange
-            inputString = "Unit Test";
-            expected = "uNIT tEST";
+            
             //Act
-            string output = inputString.InverseCase();
+            string output = input1.ChangeCase();
 
             //Assert
-            Assert.Equal(expected ,output);
+            Assert.Equal(expected1 ,output);
         }
 
         [Fact]
-        public void TitleCase()
+        public void ConvertTitleCase()
         {
             //Arrange
-            inputString = "unit test";
+            input = "unit test";
             expected = "Unit Test";
             //Act
-            string output = inputString.TitleCase();
+            string output = input.ConvertTitleCase();
 
             //Assert
             Assert.Equal(expected, output);
         }
 
         [Fact]
-        public void Capitalized()
+        public void ConvertCapitalized()
         {
             //Arrange
-            inputString = "unit test";
+            input = "unit test";
             expected = "Unit Test";
             //Act
-            string output = inputString.Capitalized();
+            string output = input.ConvertCapitalized();
 
             //Assert
             Assert.Equal(expected, output);
         }
 
         [Fact]
-        public void CheckLower()
+        public void CheckForLower()
         {
             //Arrange
-            inputString = "unittest";
+            input = "unittest";
             expected = "Success";
             //Act
-            string output = inputString.CheckLower();
+            string output = input.CheckForLower();
 
             //Assert
             Assert.Equal(expected, output);
         }
 
         [Fact]
-        public void CheckUppar()
+        public void CheckForUppar()
         {
             //Arrange
-            inputString = "UNITTEST";
+            input = "UNITTEST";
             expected = "Success";
             //Act
-            string output = inputString.CheckUppar();
+            string output = input.CheckForUppar();
 
             //Assert
             Assert.Equal(expected, output);
@@ -76,10 +77,10 @@ namespace UnitTestProject
         public void CheckforInt()
         {
             //Arrange
-            inputString = "100";
+            input = "100";
             expected = "Success";
             //Act
-            string output = inputString.CheckforInt();
+            string output = input.CheckforInt();
 
             //Assert
             Assert.Equal(expected, output);
@@ -89,10 +90,10 @@ namespace UnitTestProject
         public void RemoveLastChar()
         {
             //Arrange
-            inputString = "Unit Test";
+            input = "Unit Test";
             expected = "Unit Tes";
             //Act
-            string output = inputString.RemoveLastChar();
+            string output = input.RemoveLastChar();
 
             //Assert
             Assert.Equal(expected, output);
@@ -102,10 +103,10 @@ namespace UnitTestProject
         public void WordCount()
         {
             //Arrange
-            inputString = "Unit Test";
+            input = "Unit Test";
             expected = "2";
             //Act
-            string output = inputString.WordCount();
+            string output = input.WordCount();
 
             //Assert
             Assert.Equal(expected, output);
@@ -116,10 +117,10 @@ namespace UnitTestProject
         public void StringToInt()
         {
             //Arrange
-            inputString = "100";
+            input = "100";
             expected = "100";
             //Act
-            string output = inputString.StringToInt();
+            string output = input.StringToInt();
 
             //Assert
             Assert.Equal(expected, output);
