@@ -1,0 +1,88 @@
+{
+    "company": [
+        {
+            "id" : 1,
+            "email": "admin@falcon.com",
+            "name" : "Falcon Pvt. Ltd.",
+            "totalEmployees" : 500,
+            "address": "Washington D.C., USA",
+            "isActive": true,
+            "totalBranch": 2,
+            "branch" : [
+                {
+                    "id": 1,
+                    "name": "Headquaters",
+                    "address": "Washington D.C., USA"
+                },
+                {
+                    "id": 2,
+                    "name": "Sub-branch",
+                    "address": "California, USA"
+                }
+            ]
+        },
+        {
+            "id" : 2,
+            "email": "stevejob@apple.com",
+            "name" : "Apple Inc.",
+            "totalEmployees" : 10000,
+            "address": "California, USA",
+            "isActive": true,
+            "totalBranch": 2,
+            "branch" : [
+                {
+                    "id": 3,
+                    "name": "Headquaters",
+                    "address": "California, USA"
+                },
+                {
+                    "id": 4,
+                    "name": "Sub-branch",
+                    "address": "Washington D.C., USA"
+                }
+            ]
+        },
+        {
+            "id" : 3,
+            "email": "larypage@google.com",
+            "name" : "Google",
+            "totalEmployees" : 6000,
+            "address": "New York, USA",
+            "isActive": true,
+            "totalBranch": 2,
+            "branch" : [
+                {
+                    "id": 1,
+                    "name": "Headquaters",
+                    "address": "New York, USA"
+                },
+                {
+                    "id": 2,
+                    "name": "Sub-branch",
+                    "address": "California, USA"
+                }
+            ]
+        },
+        {
+            "id" : 4,
+            "email": "admin@cognizant.com",
+            "name" : "Cognizant Pvt. Ltd.",
+            "totalEmployees" : 1000,
+            "address": "New Delhi, India",
+            "isActive": true,
+            "totalBranch": 2,
+            "branch" : [
+                {
+                    "id": 1,
+                    "name": "Headquaters",
+                    "address": "New Delhi, India"
+                },
+                {
+                    "id": 2,
+                    "name": "Sub-branch",
+                    "address": "Kolkota, India"
+                }
+            ]
+        }
+    ]
+}
