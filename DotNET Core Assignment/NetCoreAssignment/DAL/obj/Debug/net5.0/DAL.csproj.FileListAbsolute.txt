@@ -1,0 +1,15 @@
+C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\DAL\bin\Debug\net5.0\DAL.deps.json
+C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\DAL\bin\Debug\net5.0\DAL.dll
+C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\DAL\bin\Debug\net5.0\ref\DAL.dll
+C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\DAL\bin\Debug\net5.0\DAL.pdb
+C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\DAL\bin\Debug\net5.0\Entities.dll
+C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\DAL\bin\Debug\net5.0\Entities.pdb
+C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\DAL\obj\Debug\net5.0\DAL.csprojAssemblyReference.cache
+C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\DAL\obj\Debug\net5.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\DAL\obj\Debug\net5.0\DAL.AssemblyInfoInputs.cache
+C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\DAL\obj\Debug\net5.0\DAL.AssemblyInfo.cs
+C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\DAL\obj\Debug\net5.0\DAL.csproj.CoreCompileInputs.cache
+C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\DAL\obj\Debug\net5.0\DAL.csproj.CopyComplete
+C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\DAL\obj\Debug\net5.0\DAL.dll
+C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\DAL\obj\Debug\net5.0\ref\DAL.dll
+C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\DAL\obj\Debug\net5.0\DAL.pdb

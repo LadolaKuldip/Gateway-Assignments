@@ -84,8 +84,6 @@ namespace ViewLayer
             app.UseAuthentication();
             app.UseAuthorization();
 
-            app.UseMiddleware<ResponseTimeMiddleware>(logger);
-            app.ConfigureExceptionHandler(logger);
 
             app.UseResponseCaching();
 
@@ -95,13 +93,18 @@ namespace ViewLayer
                     new Microsoft.Net.Http.Headers.CacheControlHeaderValue()
                     {
                         Public = true,
-                        MaxAge = TimeSpan.FromSeconds(10)
+                        MaxAge = TimeSpan.FromMilliseconds(500),
+                        NoCache = true,
                     };
                 context.Response.Headers[Microsoft.Net.Http.Headers.HeaderNames.Vary] =
                     new string[] { "Accept-Encoding" };
 
                 await next();
             });
+
+            app.UseMiddleware<ResponseTimeMiddleware>(logger);
+            app.ConfigureExceptionHandler(logger);
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

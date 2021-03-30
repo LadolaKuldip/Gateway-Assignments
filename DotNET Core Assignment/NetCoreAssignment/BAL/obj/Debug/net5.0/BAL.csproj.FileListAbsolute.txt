@@ -1,0 +1,17 @@
+C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\BAL\bin\Debug\net5.0\BAL.deps.json
+C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\BAL\bin\Debug\net5.0\BAL.dll
+C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\BAL\bin\Debug\net5.0\ref\BAL.dll
+C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\BAL\bin\Debug\net5.0\BAL.pdb
+C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\BAL\bin\Debug\net5.0\DAL.dll
+C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\BAL\bin\Debug\net5.0\Entities.dll
+C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\BAL\bin\Debug\net5.0\DAL.pdb
+C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\BAL\bin\Debug\net5.0\Entities.pdb
+C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\BAL\obj\Debug\net5.0\BAL.csprojAssemblyReference.cache
+C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\BAL\obj\Debug\net5.0\BAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\BAL\obj\Debug\net5.0\BAL.AssemblyInfoInputs.cache
+C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\BAL\obj\Debug\net5.0\BAL.AssemblyInfo.cs
+C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\BAL\obj\Debug\net5.0\BAL.csproj.CoreCompileInputs.cache
+C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\BAL\obj\Debug\net5.0\BAL.csproj.CopyComplete
+C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\BAL\obj\Debug\net5.0\BAL.dll
+C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\BAL\obj\Debug\net5.0\ref\BAL.dll
+C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\BAL\obj\Debug\net5.0\BAL.pdb

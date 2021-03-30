@@ -4,9 +4,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Entities;
 using BAL.Interfaces;
 using Microsoft.AspNetCore.Authorization;
+using ViewLayer.Filters;
 
 namespace ViewLayer.Controllers
 {
+    [SetAuthor("Ladola Kuldip")]
     [Authorize]
     public class EmployeesController : Controller
     {
@@ -18,7 +20,7 @@ namespace ViewLayer.Controllers
             _departmentManager = departmentManager;
         }
 
-
+        //[ResponseCache(VaryByHeader = "User-Agent", Duration = (int)0.5)]
         // GET: Employees
         public IActionResult Index()
         {
