@@ -1,11 +1,6 @@
 ﻿using Moq;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web.Http.Results;
 using Testing_Assignment_1.Controllers;
 using Testing_Assignment_1.Repository;
@@ -23,6 +18,9 @@ namespace Passenger.Test
             _passengerController = new PassengerController(mockDataRepository.Object);
         }
 
+        /// <summary>
+        /// Test Method to retrive list of Passengers
+        /// </summary>
         [Fact]
         public void Test_GetPassenger()
         {
@@ -37,6 +35,9 @@ namespace Passenger.Test
 
         }
 
+        /// <summary>
+        /// Test Method to delete Passenger
+        /// </summary>
         [Fact]
         public void Test_DeletePassenger()
         {
@@ -53,15 +54,18 @@ namespace Passenger.Test
 
         }
 
+        /// <summary>
+        /// Test Method to get Passenger details
+        /// </summary>
         [Fact]
         public void Test_GetPassengerById()
         {
             // Arrange
             var passenger = new Testing_Assignment_1.Models.Passenger();
             passenger.Id = new Guid();
-            passenger.FirstName = "Rushi";
-            passenger.LastName = "Nariya";
-            passenger.PhoneNumber = "9864751235";
+            passenger.FirstName = "Kuldip";
+            passenger.LastName = "Ladola";
+            passenger.PhoneNumber = "9876543210";
 
             // Act
             var responseObj = mockDataRepository.Setup(x => x.GetById(passenger.Id)).Returns(passenger);
@@ -71,15 +75,18 @@ namespace Passenger.Test
             Assert.NotNull(isNull);
         }
 
+        /// <summary>
+        /// Test Method to add new Passenger
+        /// </summary>
         [Fact]
         public void Test_AddPassenger()
         {
             // Arrange
             var passenger = new Testing_Assignment_1.Models.Passenger();
             passenger.Id = new Guid();
-            passenger.FirstName = "Rushi";
-            passenger.LastName = "Nariya";
-            passenger.PhoneNumber = "9864751235";
+            passenger.FirstName = "Kuldip";
+            passenger.LastName = "Ladola";
+            passenger.PhoneNumber = "9876543210";
             // Act
             var response = mockDataRepository.Setup(x => x.AddPassenger(passenger)).Returns(AddPassenger());
             var result = _passengerController.Post(passenger);
@@ -88,12 +95,18 @@ namespace Passenger.Test
             Assert.NotNull(result);
         }
 
+        /// <summary>
+        /// Test Method to update Passenger data
+        /// </summary>
         [Fact]
         public void Test_UpdatePassenger()
         {
             // Arrange
-            var model = JsonConvert.DeserializeObject<Testing_Assignment_1.Models.Passenger>(File.ReadAllText("Data/UpdateUser.json"));
-
+            var model = new Testing_Assignment_1.Models.Passenger();
+            model.Id = new Guid();
+            model.FirstName = "Kuldip";
+            model.LastName = "Ladola";
+            model.PhoneNumber = "9876543210";
             // Act
             var resultObj = mockDataRepository.Setup(x => x.Update(model)).Returns(model);
             var response = _passengerController.Put(model);
@@ -101,6 +114,9 @@ namespace Passenger.Test
             Assert.Equal(model, response);
         }
 
+        /// <summary>
+        /// returns list of Passengers
+        /// </summary>
         private static IList<Testing_Assignment_1.Models.Passenger> GetPassengers()
         {
             Guid id1 = new Guid();
@@ -116,13 +132,16 @@ namespace Passenger.Test
             return passengers;
         }
 
+        /// <summary>
+        /// creates Passenger
+        /// </summary>
         private static Testing_Assignment_1.Models.Passenger AddPassenger()
         {
             var passenger = new Testing_Assignment_1.Models.Passenger();
             passenger.Id = new Guid();
-            passenger.FirstName = "Rushi";
-            passenger.LastName = "Nariya";
-            passenger.PhoneNumber = "9864751235";
+            passenger.FirstName = "Kuldip";
+            passenger.LastName = "Ladola";
+            passenger.PhoneNumber = "9876543210";
             return passenger;
         }
     }
