@@ -1,3 +1,29 @@
-2021-01-06 08:23:21,496 [9] ERROR ProductManagement.ExceptionHandler.UserExceptionHandler [(null)] - Exception Occured :The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Details(Int32)' in 'ProductManagement.Controllers.ProductController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
-Parameter name: parameters
-2021-01-06 08:27:13,966 [9] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by Anonymous User
+2021-04-01 14:32:25,506 [5] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by Anonymous User
+2021-04-01 14:34:02,511 [6] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
+2021-04-01 14:34:13,958 [15] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
+2021-04-01 14:34:15,145 [16] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
+2021-04-01 14:34:15,903 [5] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
+2021-04-01 14:34:22,581 [5] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
+2021-04-01 14:34:27,626 [5] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
+2021-04-01 14:34:34,932 [16] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
+2021-04-01 14:34:36,543 [5] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
+2021-04-01 14:34:38,489 [5] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
+2021-04-01 14:35:15,487 [16] INFO  ProductManagement.Controllers.AccountController [(null)] - User Login with Emailkuldip.patel@gmail.com
+2021-04-01 14:35:15,609 [15] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by user [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-01 14:35:18,824 [15] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-01 14:35:28,614 [16] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by user [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-01 14:35:33,201 [15] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-01 14:36:32,823 [15] INFO  ProductManagement.Controllers.HomeController [(null)] - Product Details(29) Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-01 14:36:42,977 [15] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-01 14:36:55,260 [17] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-01 14:37:07,610 [15] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-01 14:37:12,958 [17] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by Anonymous User
+2021-04-01 14:37:14,471 [15] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
+2021-04-01 14:38:24,191 [9] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by Anonymous User
+2021-04-01 14:39:42,330 [11] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
+2021-04-01 14:39:45,295 [9] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
+2021-04-01 14:39:48,639 [11] INFO  ProductManagement.Controllers.AccountController [(null)] - User Login with Emailkuldip.patel@gmail.com
+2021-04-01 14:40:26,170 [10] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-01 14:40:30,009 [12] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by Anonymous User
+2021-04-01 14:44:20,167 [11] INFO  ProductManagement.Controllers.AccountController [(null)] - User Login with Emailkuldip.patel@gmail.com
+2021-04-01 14:44:41,856 [10] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
