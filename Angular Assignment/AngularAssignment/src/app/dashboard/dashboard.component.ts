@@ -13,8 +13,7 @@ export class DashboardComponent implements OnInit {
 
   companies: any = [];
   addCompanyForm !: FormGroup;
-  
-  constructor(private httpClient: HttpClient, private companyServiceService : CompanyServiceService,private router:Router) { }
+  constructor(private httpClient: HttpClient, private router:Router, private companyServiceService : CompanyServiceService) { }
 
   ngOnInit(): void {
    
@@ -28,7 +27,6 @@ export class DashboardComponent implements OnInit {
   {
     this.companyServiceService.getById(id).subscribe(company => {
       this.companyServiceService.companyDetails(company);
-      debugger;
       this.router.navigate(['/edit-company']);
     })
   }

@@ -44,16 +44,16 @@
     },
     {
       "id": 3,
+      "name": "Google  ",
       "email": "larypage@google.com",
-      "name": "Google",
-      "totalEmployees": 6000,
       "address": "New York, USA",
-      "isActive": true,
+      "totalEmployees": 6000,
       "totalBranch": 2,
+      "isActive": true,
       "branch": [
         {
           "id": 1,
-          "name": "Headquaters",
+          "name": "Main-branch",
           "address": "New York, USA"
         },
         {
@@ -64,39 +64,23 @@
       ]
     },
     {
-      "id": 4,
-      "email": "admin@cognizant.com",
-      "name": "Cognizant Pvt. Ltd.",
-      "totalEmployees": 1000,
-      "address": "New Delhi, India",
-      "isActive": true,
-      "totalBranch": 2,
-      "branch": [
-        {
-          "id": 1,
-          "name": "Headquaters",
-          "address": "New Delhi, India"
-        },
-        {
-          "id": 2,
-          "name": "Sub-branch",
-          "address": "Kolkota, India"
-        }
-      ]
-    },
-    {
-      "id": 1617087466416,
+      "id": 1617253562350,
       "name": "Gatewayinfo",
       "email": "gateway@gmail.com",
-      "address": "abc",
-      "totalEmployees": 1222,
+      "address": "Corporate Housde, Bodekhdev",
+      "totalEmployees": 10000,
       "totalBranch": 2,
       "isActive": true,
       "branch": [
         {
-          "id": 1617089689396,
-          "name": "dsf",
-          "address": "few"
+          "id": 1617253562351,
+          "name": "main",
+          "address": "Corporate Housde, Bodekhdev,Ahmedabad"
+        },
+        {
+          "id": 1617258900829,
+          "name": "Other",
+          "address": "Linq,Gandhinagar"
         }
       ]
     }

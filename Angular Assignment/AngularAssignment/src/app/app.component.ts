@@ -9,11 +9,11 @@ import { HttpClient } from "@angular/common/http";
 })
 export class AppComponent implements OnInit {
   title = 'AngularFinalAssignment';
-  
-  constructor(){}
 
-  ngOnInit(){
-   
+  constructor() { }
+
+  ngOnInit() {
+
   }
 
 }

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormArray, FormControl } from '@angular/forms';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 import { Company } from '../model/company.model';
-import {CompanyServiceService} from '../company-service.service'
+import { CompanyServiceService } from '../company-service.service'
 
 @Component({
   selector: 'app-edit-company',
@@ -15,65 +15,57 @@ export class EditCompanyComponent implements OnInit {
 
   addCompanyForm !: FormGroup;
   company !: Company;
-  
 
-  constructor(private formBuilder: FormBuilder, private router:Router, private companyServiceService : CompanyServiceService) { }
+
+  constructor(private formBuilder: FormBuilder, private router: Router, private companyServiceService: CompanyServiceService) { }
 
   ngOnInit(): void {
     this.addCompanyForm = this.formBuilder.group({
-      id : ['', [Validators.required]],
-      name : ['', [Validators.required, Validators.minLength(8)]],
-      email: ['', [Validators.required, Validators.email ,Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
+      id: ['', [Validators.required]],
+      name: ['', [Validators.required, Validators.minLength(8)]],
+      email: ['', [Validators.required, Validators.email, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
       address: ['', Validators.required],
       totalEmployees: ['', Validators.required],
       totalBranch: ['', Validators.required],
       isActive: ['', Validators.required],
-      branch : this.formBuilder.array([this.formBuilder.group({id : Math.floor(Math.random()*10)+ (new Date()).getTime() , name: '', address: ''})])
+      branch: this.formBuilder.array([])
     });
 
     this.company = this.companyServiceService.getCompany();
-    
-    this.addCompanyForm.controls['id'].setValue(this.company.id);
-    this.addCompanyForm.controls['name'].setValue(this.company.name);
-    this.addCompanyForm.controls['email'].setValue(this.company.email);
-    this.addCompanyForm.controls['address'].setValue(this.company.address);
-    this.addCompanyForm.controls['totalEmployees'].setValue(this.company.totalEmployees);
-    this.addCompanyForm.controls['totalBranch'].setValue(this.company.totalBranch);
-    this.addCompanyForm.controls['isActive'].setValue(this.company.isActive);
-    this.addCompanyForm.controls['branch'].setValue(this.company.branch);
-    debugger;
-    console.log(this.company.branch);
-    for(let branch of this.company.branch){
-      
-        // id: this.addCompanyForm.controls['branch'].setValue(branch.id),
-        // this.addCompanyForm.controls['name'].setValue(branch.name),
-        // this.addCompanyForm.controls['address'].setValue(branch.address)
-        this.addCompanyForm.controls['branch'].setValue(branch)
+
+    for (const index in this.company.branch) {
+      this.addBranch();
     }
+    this.addCompanyForm.setValue(this.company)
   }
 
   get registerFormControl() {
     return this.addCompanyForm.controls;
   }
 
-  get branchs()
-  {
+  get branchs() {
     return this.addCompanyForm.get('branch') as FormArray;
   }
 
-  onSubmit()
-  { 
+  onCreate(): FormGroup {
+    return this.formBuilder.group({
+      id: Math.floor(Math.random() * 10) + (new Date()).getTime(),
+      name: '',
+      address: ''
+    })
+  }
+
+  onSubmit() {
     debugger;
     this.submitted = true;
-    if(this.addCompanyForm.invalid)
-    {
+    if (this.addCompanyForm.invalid) {
       return;
-    }else {
+    } else {
       debugger;
       console.log(this.company);
       this.companyServiceService.update(this.addCompanyForm.value).subscribe(
         res => {
-          
+
           this.router.navigate(['/dashboard']);
           setTimeout("location.reload(true);", 100);
           this.addCompanyForm.reset();
@@ -82,13 +74,15 @@ export class EditCompanyComponent implements OnInit {
     }
   }
 
-  addBranch()
-  {
-    this.branchs.push(this.formBuilder.group({id : '', name: '', address: ''}))
+  addBranch() {
+    this.branchs.push(this.onCreate())
   }
 
-  deleteBranch(index : number) {
+  deleteBranch(index: number) {
     this.branchs.removeAt(index);
   }
+
+
+
 
 }
