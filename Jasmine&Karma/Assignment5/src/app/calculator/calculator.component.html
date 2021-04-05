@@ -1,0 +1,18 @@
+<div>
+    <input [(ngModel)]="param1" type="number">
+    <input [(ngModel)]="param2" type="number">
+</div>
+<br/>
+
+<div>
+    <input type="button" (click)="add()" value="+">
+    <input type="button" (click)="subtract()" value="-">
+    <input type="button" (click)="multiply()" value="*">
+    <input type="button" (click)="divide()" value="/">
+</div>
+<div>
+    <p>
+        Result : <b> {{ result }} </b>
+    </p>
+    
+</div>
