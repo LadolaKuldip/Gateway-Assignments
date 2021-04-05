@@ -10,12 +10,15 @@
 <h2>Index</h2>
 
 <div class="col-md-12" style="margin-bottom: 30px;">
+    @if (User.Identity.IsAuthenticated)
+    {
     <span style="display:inline;">
         @Html.ActionLink("Create New", "Create", new { }, new { @class = "btn btn-warning" })
     </span>
     <span style="float:right;">
-        @Html.ActionLink("Category", "Index", "Category",new { }, new { @class = "btn btn-primary" })
+        @Html.ActionLink("Category", "Index", "Category", new { }, new { @class = "btn btn-primary" })
     </span>
+    }
 </div>
 
 @using (Html.BeginForm("Index", "Product", FormMethod.Get))

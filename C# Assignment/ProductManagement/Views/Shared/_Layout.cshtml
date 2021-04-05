@@ -23,7 +23,10 @@
                 <ul class="nav navbar-nav">
                     @*<li>@Html.ActionLink("Home", "Index", "Home")</li>*@
                     <li>@Html.ActionLink("Product List", "Index", "Product")</li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
                     <li>@Html.ActionLink("Add Product", "Create", "Product")</li>
+                    }
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

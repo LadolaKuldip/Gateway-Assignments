@@ -1,29 +1,78 @@
-2021-04-01 14:32:25,506 [5] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by Anonymous User
-2021-04-01 14:34:02,511 [6] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
-2021-04-01 14:34:13,958 [15] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
-2021-04-01 14:34:15,145 [16] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
-2021-04-01 14:34:15,903 [5] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
-2021-04-01 14:34:22,581 [5] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
-2021-04-01 14:34:27,626 [5] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
-2021-04-01 14:34:34,932 [16] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
-2021-04-01 14:34:36,543 [5] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
-2021-04-01 14:34:38,489 [5] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
-2021-04-01 14:35:15,487 [16] INFO  ProductManagement.Controllers.AccountController [(null)] - User Login with Emailkuldip.patel@gmail.com
-2021-04-01 14:35:15,609 [15] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by user [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
-2021-04-01 14:35:18,824 [15] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
-2021-04-01 14:35:28,614 [16] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by user [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
-2021-04-01 14:35:33,201 [15] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
-2021-04-01 14:36:32,823 [15] INFO  ProductManagement.Controllers.HomeController [(null)] - Product Details(29) Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
-2021-04-01 14:36:42,977 [15] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
-2021-04-01 14:36:55,260 [17] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
-2021-04-01 14:37:07,610 [15] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
-2021-04-01 14:37:12,958 [17] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by Anonymous User
-2021-04-01 14:37:14,471 [15] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
-2021-04-01 14:38:24,191 [9] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by Anonymous User
-2021-04-01 14:39:42,330 [11] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
-2021-04-01 14:39:45,295 [9] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
-2021-04-01 14:39:48,639 [11] INFO  ProductManagement.Controllers.AccountController [(null)] - User Login with Emailkuldip.patel@gmail.com
-2021-04-01 14:40:26,170 [10] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
-2021-04-01 14:40:30,009 [12] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by Anonymous User
-2021-04-01 14:44:20,167 [11] INFO  ProductManagement.Controllers.AccountController [(null)] - User Login with Emailkuldip.patel@gmail.com
-2021-04-01 14:44:41,856 [10] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 12:10:55,193 [5] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by Anonymous User
+2021-04-02 16:55:22,330 [8] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by Anonymous User
+2021-04-02 16:55:38,307 [8] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
+2021-04-02 16:56:05,283 [8] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
+2021-04-02 16:56:07,161 [8] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
+2021-04-02 16:57:24,594 [8] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
+2021-04-02 16:57:54,907 [8] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
+2021-04-02 16:57:56,385 [13] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
+2021-04-02 16:59:04,730 [8] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
+2021-04-02 16:59:07,462 [9] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by Anonymous User
+2021-04-02 17:00:43,628 [9] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by Anonymous User
+2021-04-02 17:00:58,134 [9] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by Anonymous User
+2021-04-02 17:01:20,653 [5] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by Anonymous User
+2021-04-02 17:02:26,764 [18] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by Anonymous User
+2021-04-02 17:03:45,273 [10] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by Anonymous User
+2021-04-02 17:03:58,727 [10] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by Anonymous User
+2021-04-02 17:05:09,253 [10] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by Anonymous User
+2021-04-02 17:06:24,702 [10] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by Anonymous User
+2021-04-02 17:06:43,749 [10] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by Anonymous User
+2021-04-02 17:07:21,259 [22] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by Anonymous User
+2021-04-02 17:12:37,297 [21] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by Anonymous User
+2021-04-02 17:15:00,683 [22] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by Anonymous User
+2021-04-02 17:17:09,864 [22] INFO  ProductManagement.Controllers.AccountController [(null)] - User Login with Emailkuldip.patel@gmail.com
+2021-04-02 17:17:10,044 [22] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by user [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:17:17,283 [22] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:17:27,502 [20] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:17:28,771 [22] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:17:29,845 [27] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:17:30,571 [20] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:17:31,242 [27] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:17:31,779 [22] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:17:36,681 [22] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:17:47,040 [20] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:20:51,154 [29] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:21:13,418 [33] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by user [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:22:06,399 [34] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:22:21,819 [37] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:22:28,099 [34] INFO  ProductManagement.Controllers.HomeController [(null)] - Product Details(31) Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:22:35,236 [34] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:22:49,236 [33] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:25:04,935 [10] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by Anonymous User
+2021-04-02 17:26:05,280 [10] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
+2021-04-02 17:26:18,543 [10] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
+2021-04-02 17:26:20,883 [10] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
+2021-04-02 17:26:22,127 [11] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
+2021-04-02 17:26:27,046 [11] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by Anonymous User
+2021-04-02 17:26:33,180 [12] INFO  ProductManagement.Controllers.AccountController [(null)] - User Login with Emailkuldip.patel@gmail.com
+2021-04-02 17:26:33,238 [12] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by user [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:26:37,917 [11] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:28:01,460 [14] INFO  ProductManagement.Controllers.HomeController [(null)] - Product Created with Name(xyz) by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:28:01,518 [12] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:28:07,337 [11] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:28:47,487 [13] INFO  ProductManagement.Controllers.HomeController [(null)] - Product Edited with Id(45) by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:28:47,508 [3] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:28:49,675 [14] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:29:11,003 [13] INFO  ProductManagement.Controllers.HomeController [(null)] - Product Edited with Id(45) by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:29:11,042 [3] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:29:13,055 [14] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:29:23,842 [13] INFO  ProductManagement.Controllers.HomeController [(null)] - Product Details(45) Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:29:32,288 [14] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:29:34,185 [3] INFO  ProductManagement.Controllers.HomeController [(null)] - Product Details(29) Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:29:47,552 [13] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:29:55,105 [13] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:29:59,269 [3] INFO  ProductManagement.Controllers.HomeController [(null)] - Product Deleted with Id(45) by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:29:59,292 [19] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:30:10,689 [13] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:30:17,275 [13] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:30:19,628 [14] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:30:26,723 [13] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:30:46,725 [21] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Created with Name(Temp1) by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:30:55,615 [19] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Edited with Id(19) by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:31:40,239 [24] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Created with Name(fg) by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:31:51,035 [3] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Edited with Id(20) by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:31:54,531 [3] INFO  ProductManagement.Controllers.HomeController [(null)] - Category Deleted with Id(19) by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:32:00,533 [3] INFO  ProductManagement.Controllers.HomeController [(null)] - Product List Page Visited by User [ be09ff1b-1dfd-4996-a6c4-e00794f1397e ]
+2021-04-02 17:32:11,151 [20] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by Anonymous User
+2021-04-02 17:32:35,279 [19] INFO  ProductManagement.Controllers.AccountController [(null)] - User Registered with Emaila.c@gmail.com
+2021-04-02 17:32:35,312 [19] DEBUG ProductManagement.Controllers.HomeController [(null)] - Info Page Visited by user [ 46b2fb5f-04c4-4d20-89a4-77ab781b3273 ]
