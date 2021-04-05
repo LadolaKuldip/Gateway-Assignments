@@ -2,12 +2,12 @@
   "company": [
     {
       "id": 1,
-      "email": "admin@falcon.com",
       "name": "Falcon Pvt. Ltd.",
-      "totalEmployees": 500,
+      "email": "admin@falcon.com",
       "address": "Washington D.C., USA",
-      "isActive": true,
+      "totalEmployees": 500,
       "totalBranch": 2,
+      "isActive": true,
       "branch": [
         {
           "id": 1,
@@ -64,23 +64,18 @@
       ]
     },
     {
-      "id": 1617253562350,
-      "name": "Gatewayinfo",
-      "email": "gateway@gmail.com",
-      "address": "Corporate Housde, Bodekhdev",
-      "totalEmployees": 10000,
-      "totalBranch": 2,
+      "id": 1617264268949,
+      "name": "ferfrefrefre",
+      "email": "kuldip.ladola@thegatewaycorp.co.in",
+      "address": "few",
+      "totalEmployees": 12,
+      "totalBranch": 1,
       "isActive": true,
       "branch": [
         {
-          "id": 1617253562351,
-          "name": "main",
-          "address": "Corporate Housde, Bodekhdev,Ahmedabad"
-        },
-        {
-          "id": 1617258900829,
-          "name": "Other",
-          "address": "Linq,Gandhinagar"
+          "id": 1617264268949,
+          "name": "fer",
+          "address": "fre"
         }
       ]
     }

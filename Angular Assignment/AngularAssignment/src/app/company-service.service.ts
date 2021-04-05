@@ -14,6 +14,7 @@ export class CompanyServiceService {
       'Content-Type': 'application/json'
     })
   }
+  
   company !: Company
   constructor(private httpClient: HttpClient) { }
 
