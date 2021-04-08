@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SampleDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AspNetRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="AspNetUsers" Relationship="Self.AspNetUserRoles" FromRole="AspNetRoles" ToRole="AspNetUsers" />
+  </EntityType>
+  <EntityType Name="AspNetUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+    <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="AspNetRoles" Relationship="Self.AspNetUserRoles" FromRole="AspNetUsers" ToRole="AspNetRoles" />
+  </EntityType>
+  <EntityType Name="Brand">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="DealerBrands" Relationship="Self.FK_DealerBrands_Brands" FromRole="Brands" ToRole="DealerBrands" />
+    <NavigationProperty Name="Models" Relationship="Self.FK_Models_Brands" FromRole="Brands" ToRole="Models" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="13" FixedLength="false" Unicode="true" />
+    <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="DealerId" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Dealer" Relationship="Self.FK_Customers_Dealers" FromRole="Customers" ToRole="Dealers" />
+    <NavigationProperty Name="Vehicles" Relationship="Self.FK_Vehicles_Customers" FromRole="Customers" ToRole="Vehicles" />
+  </EntityType>
+  <EntityType Name="DealerBrand">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DealerId" Type="Int32" Nullable="false" />
+    <Property Name="BrandId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Brand" Relationship="Self.FK_DealerBrands_Brands" FromRole="DealerBrands" ToRole="Brands" />
+    <NavigationProperty Name="Dealer" Relationship="Self.FK_DealerBrands_Dealers" FromRole="DealerBrands" ToRole="Dealers" />
+  </EntityType>
+  <EntityType Name="Dealer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="13" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Customers" Relationship="Self.FK_Customers_Dealers" FromRole="Dealers" ToRole="Customers" />
+    <NavigationProperty Name="DealerBrands" Relationship="Self.FK_DealerBrands_Dealers" FromRole="Dealers" ToRole="DealerBrands" />
+    <NavigationProperty Name="Mechanics" Relationship="Self.FK_Mechanics_Dealers" FromRole="Dealers" ToRole="Mechanics" />
+    <NavigationProperty Name="ServiceBookings" Relationship="Self.FK_ServiceBookings_Dealers" FromRole="Dealers" ToRole="ServiceBookings" />
+  </EntityType>
+  <EntityType Name="Mechanic">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="13" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DealerId" Type="Int32" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Dealer" Relationship="Self.FK_Mechanics_Dealers" FromRole="Mechanics" ToRole="Dealers" />
+    <NavigationProperty Name="ServiceBookings" Relationship="Self.FK_ServiceBookings_Mechanics" FromRole="Mechanics" ToRole="ServiceBookings" />
+  </EntityType>
+  <EntityType Name="Model">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="BrandId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Brand" Relationship="Self.FK_Models_Brands" FromRole="Models" ToRole="Brands" />
+    <NavigationProperty Name="Vehicles" Relationship="Self.FK_Vehicles_Models" FromRole="Models" ToRole="Vehicles" />
+  </EntityType>
+  <EntityType Name="SelectedService">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ServiceBookingId" Type="Int32" Nullable="false" />
+    <Property Name="ServiceId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Service" Relationship="Self.FK_SelectedServices_Services" FromRole="SelectedServices" ToRole="Services" />
+  </EntityType>
+  <EntityType Name="ServiceBooking">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BookingDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ReturnDate" Type="DateTime" Precision="0" />
+    <Property Name="TotalAmmount" Type="Double" Nullable="false" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PickupAddress" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DropAddress" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Feedback" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="VehicleId" Type="Int32" Nullable="false" />
+    <Property Name="DealerId" Type="Int32" Nullable="false" />
+    <Property Name="MechanicId" Type="Int32" />
+    <Property Name="PayDone" Type="Boolean" />
+    <Property Name="PayMethod" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PayId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Dealer" Relationship="Self.FK_ServiceBookings_Dealers" FromRole="ServiceBookings" ToRole="Dealers" />
+    <NavigationProperty Name="Mechanic" Relationship="Self.FK_ServiceBookings_Mechanics" FromRole="ServiceBookings" ToRole="Mechanics" />
+    <NavigationProperty Name="Vehicle" Relationship="Self.FK_ServiceBookings_Vehicles" FromRole="ServiceBookings" ToRole="Vehicles" />
+  </EntityType>
+  <EntityType Name="Service">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Type" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Duration" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="Amount" Type="Double" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="SelectedServices" Relationship="Self.FK_SelectedServices_Services" FromRole="Services" ToRole="SelectedServices" />
+  </EntityType>
+  <EntityType Name="Vehicle">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NumberPlate" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ChassisNumber" Type="String" MaxLength="17" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RegistrationDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="LastServiceDate" Type="DateTime" Precision="0" />
+    <Property Name="FuelType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CustomerId" Type="Int32" Nullable="false" />
+    <Property Name="ModelId" Type="Int32" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Customer" Relationship="Self.FK_Vehicles_Customers" FromRole="Vehicles" ToRole="Customers" />
+    <NavigationProperty Name="Model" Relationship="Self.FK_Vehicles_Models" FromRole="Vehicles" ToRole="Models" />
+    <NavigationProperty Name="ServiceBookings" Relationship="Self.FK_ServiceBookings_Vehicles" FromRole="Vehicles" ToRole="ServiceBookings" />
+  </EntityType>
+  <Association Name="FK_DealerBrands_Brands">
+    <End Role="Brands" Type="Self.Brand" Multiplicity="1" />
+    <End Role="DealerBrands" Type="Self.DealerBrand" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Brands">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DealerBrands">
+        <PropertyRef Name="BrandId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Models_Brands">
+    <End Role="Brands" Type="Self.Brand" Multiplicity="1" />
+    <End Role="Models" Type="Self.Model" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Brands">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Models">
+        <PropertyRef Name="BrandId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Customers_Dealers">
+    <End Role="Dealers" Type="Self.Dealer" Multiplicity="0..1" />
+    <End Role="Customers" Type="Self.Customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dealers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Customers">
+        <PropertyRef Name="DealerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Vehicles_Customers">
+    <End Role="Customers" Type="Self.Customer" Multiplicity="1" />
+    <End Role="Vehicles" Type="Self.Vehicle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Vehicles">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DealerBrands_Dealers">
+    <End Role="Dealers" Type="Self.Dealer" Multiplicity="1" />
+    <End Role="DealerBrands" Type="Self.DealerBrand" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dealers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DealerBrands">
+        <PropertyRef Name="DealerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mechanics_Dealers">
+    <End Role="Dealers" Type="Self.Dealer" Multiplicity="1" />
+    <End Role="Mechanics" Type="Self.Mechanic" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dealers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Mechanics">
+        <PropertyRef Name="DealerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServiceBookings_Dealers">
+    <End Role="Dealers" Type="Self.Dealer" Multiplicity="1" />
+    <End Role="ServiceBookings" Type="Self.ServiceBooking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dealers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ServiceBookings">
+        <PropertyRef Name="DealerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServiceBookings_Mechanics">
+    <End Role="Mechanics" Type="Self.Mechanic" Multiplicity="0..1" />
+    <End Role="ServiceBookings" Type="Self.ServiceBooking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mechanics">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ServiceBookings">
+        <PropertyRef Name="MechanicId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Vehicles_Models">
+    <End Role="Models" Type="Self.Model" Multiplicity="1" />
+    <End Role="Vehicles" Type="Self.Vehicle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Models">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Vehicles">
+        <PropertyRef Name="ModelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SelectedServices_Services">
+    <End Role="Services" Type="Self.Service" Multiplicity="1" />
+    <End Role="SelectedServices" Type="Self.SelectedService" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Services">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SelectedServices">
+        <PropertyRef Name="ServiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServiceBookings_Vehicles">
+    <End Role="Vehicles" Type="Self.Vehicle" Multiplicity="1" />
+    <End Role="ServiceBookings" Type="Self.ServiceBooking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vehicles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ServiceBookings">
+        <PropertyRef Name="VehicleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AspNetUserRoles">
+    <End Role="AspNetRoles" Type="Self.AspNetRole" Multiplicity="*" />
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="SampleDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRole" />
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUser" />
+    <EntitySet Name="Brands" EntityType="Self.Brand" />
+    <EntitySet Name="Customers" EntityType="Self.Customer" />
+    <EntitySet Name="DealerBrands" EntityType="Self.DealerBrand" />
+    <EntitySet Name="Dealers" EntityType="Self.Dealer" />
+    <EntitySet Name="Mechanics" EntityType="Self.Mechanic" />
+    <EntitySet Name="Models" EntityType="Self.Model" />
+    <EntitySet Name="SelectedServices" EntityType="Self.SelectedService" />
+    <EntitySet Name="ServiceBookings" EntityType="Self.ServiceBooking" />
+    <EntitySet Name="Services" EntityType="Self.Service" />
+    <EntitySet Name="Vehicles" EntityType="Self.Vehicle" />
+    <AssociationSet Name="FK_DealerBrands_Brands" Association="Self.FK_DealerBrands_Brands">
+      <End Role="Brands" EntitySet="Brands" />
+      <End Role="DealerBrands" EntitySet="DealerBrands" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Models_Brands" Association="Self.FK_Models_Brands">
+      <End Role="Brands" EntitySet="Brands" />
+      <End Role="Models" EntitySet="Models" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Customers_Dealers" Association="Self.FK_Customers_Dealers">
+      <End Role="Dealers" EntitySet="Dealers" />
+      <End Role="Customers" EntitySet="Customers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vehicles_Customers" Association="Self.FK_Vehicles_Customers">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="Vehicles" EntitySet="Vehicles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DealerBrands_Dealers" Association="Self.FK_DealerBrands_Dealers">
+      <End Role="Dealers" EntitySet="Dealers" />
+      <End Role="DealerBrands" EntitySet="DealerBrands" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mechanics_Dealers" Association="Self.FK_Mechanics_Dealers">
+      <End Role="Dealers" EntitySet="Dealers" />
+      <End Role="Mechanics" EntitySet="Mechanics" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServiceBookings_Dealers" Association="Self.FK_ServiceBookings_Dealers">
+      <End Role="Dealers" EntitySet="Dealers" />
+      <End Role="ServiceBookings" EntitySet="ServiceBookings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServiceBookings_Mechanics" Association="Self.FK_ServiceBookings_Mechanics">
+      <End Role="Mechanics" EntitySet="Mechanics" />
+      <End Role="ServiceBookings" EntitySet="ServiceBookings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vehicles_Models" Association="Self.FK_Vehicles_Models">
+      <End Role="Models" EntitySet="Models" />
+      <End Role="Vehicles" EntitySet="Vehicles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SelectedServices_Services" Association="Self.FK_SelectedServices_Services">
+      <End Role="Services" EntitySet="Services" />
+      <End Role="SelectedServices" EntitySet="SelectedServices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServiceBookings_Vehicles" Association="Self.FK_ServiceBookings_Vehicles">
+      <End Role="Vehicles" EntitySet="Vehicles" />
+      <End Role="ServiceBookings" EntitySet="ServiceBookings" />
+    </AssociationSet>
+    <AssociationSet Name="AspNetUserRoles" Association="Self.AspNetUserRoles">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,117 @@
+﻿@model ASC.Common.ServiceBookingDetailModel
+
+@{
+    ViewBag.Title = "Pay";
+}
+
+<link href="~/Template/css/Appointment-Progressbar.css" rel="stylesheet" />
+
+<div class="modal-content col-6">
+    <div class="form-horizontal">
+        <div class="card-body">
+
+            <div class="container-fluid">
+                <h3 class=" ">Service Booking</h3>
+
+                <div class="form-horizontal">
+
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active">
+                            Booking Details
+                        </li>
+                    </ol>
+
+                    <div class="card-body" style="padding-top:0px;padding-bottom:0px;">
+                        <div class="table-responsive">
+                            <table class="table" width="100%" cellspacing="0">
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.ServiceBooking.BookingDate)
+                                    </th>
+                                    <td>
+                                        @Html.DisplayFor(model => model.ServiceBooking.BookingDate)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.ServiceBooking.ReturnDate)
+                                    </th>
+                                    <td>
+                                        @Html.DisplayFor(model => model.ServiceBooking.ReturnDate)
+                                    </td>
+                                </tr>
+
+                                <tr style="border-bottom:1px solid #dee2e6;">
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.ServiceBooking.Dealer.Name)
+                                    </th>
+                                    <td>
+                                        @Html.DisplayFor(model => model.ServiceBooking.Dealer.Name)
+                                    </td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #dee2e6;">
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.ServiceBooking.Dealer.PhoneNumber)
+                                    </th>
+                                    <td>
+                                        @Html.DisplayFor(model => model.ServiceBooking.Dealer.PhoneNumber)
+                                    </td>
+                                </tr>
+                                <tr style="border-bottom:1px solid #dee2e6;">
+
+                                    <td>
+                                        <b> TOTAL :</b>
+                                    </td>
+                                    <td>
+                                        <b> @Html.DisplayFor(model => model.ServiceBooking.TotalAmmount)  &#8377;</b>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="row">
+                    <div class="col-5">
+                        <a href='@Url.Action("COD", "User", new { id = @Model.ServiceBooking.Id })' class="btn btn-sm btn-danger float-right">
+                            &nbsp; COD &nbsp;
+                        </a>
+                    </div>
+                    <div class="col-2" style="text-align:center;">
+                        <b>OR</b>
+                    </div>
+                    <div class="col-5">
+                        <form action="/User/Charge" method="POST">
+                            <input type="number" name="ServiceId" id="ServiceId" value="@Model.ServiceBooking.Id" hidden />
+                            <script src="//checkout.stripe.com/v2/checkout.js"
+                                    class="stripe-button"
+                                    data-key="@ViewBag.StripePublishKey"
+                                    data-locale="auto"
+                                    data-description="Sample Charge"
+                                    data-Currency="INR"
+                                    data-amount="@ViewBag.TotalAmmount"
+                                    data-label="ONLINE"></script>
+                        </form>
+                    </div>
+                </div>
+                <hr/>
+
+            </div>
+
+
+
+
+        </div>
+    </div>
+</div>

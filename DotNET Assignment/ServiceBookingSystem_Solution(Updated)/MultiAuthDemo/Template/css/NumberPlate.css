@@ -1,0 +1,17 @@
+﻿.plate {
+    display: block;
+    height: 40px;
+    background-color: #FCE205;
+    box-shadow: 5px 5px 2px #888888;
+    border: 3px solid;
+    border-radius: 5px;
+}
+
+.number {
+    text-align: center;
+    padding: 3px 0px;
+    color: #000000;
+    font-family: Trebuchet MS;
+    font-size: 20px;
+    font-weight: bold;
+}

@@ -1,0 +1,274 @@
+﻿@model IEnumerable<ASC.Entities.ServiceBooking>
+
+@{
+    ViewBag.Title = "Appointment";
+}
+<link href="~/Template/css/Popup-form.css" rel="stylesheet" />
+<link href="~/Template/css/NumberPlate.css" rel="stylesheet" />
+
+<div class="container-fluid">
+    <h1 class="mt-4">Appointments</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item active">
+            <a href='@Url.Action("CreateAppointment","User")' class="btn btn-danger">
+                <i class="fas fa-plus"></i> Appointment
+            </a>
+        </li>
+    </ol>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-6">
+                    <i class="fas fa-table mr-1"></i>
+                    All Appointments
+                </div>
+@*
+                <div class="col-6 float-right">
+                    <table>
+                        <tr>
+                            <td>
+                                <i class="fas fa-hourglass-half fa-spin" style="color:red;"></i> Pending &nbsp;
+                            </td>
+                            <td>
+                                <i class="fas fa-check" style="color:blue;"></i> Approved &nbsp;
+                            </td>
+                            <td>
+                                <i class="fas fa-sync fa-spin" style="color:orange;"></i> Processing &nbsp;
+                            </td>
+                            <td>
+                                <i class="fas fas fa-check-double" style="color:green;"></i> Completed &nbsp;
+                            </td>
+                            <td>
+                                <i class="fas fa-check-circle" style="color:yellowgreen;"></i> Payment Done &nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </div>*@
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.VehicleId)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.BookingDate)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ReturnDate)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.TotalAmmount)
+                            </th>
+
+                            <th>
+                                @Html.DisplayNameFor(model => model.DealerId)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Status)
+                            </th>
+                            <th>
+
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td style="min-width:160px;">
+                                    <div class="plate">
+                                        <div class="number">
+                                            <i class="fas fa-globe-asia" style="color:blue;"></i>
+                                            @Html.DisplayFor(modelItem => item.Vehicle.NumberPlate)
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.BookingDate)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ReturnDate)
+                                </td>
+                                <td>
+
+                                    @Html.DisplayFor(modelItem => item.TotalAmmount)
+                                </td>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Dealer.Name)
+                                </td>
+                                <td>
+                                    @if (item.Status.Equals("Pending"))
+                                    {
+                                        <i class="fas fa-hourglass-half fa-spin" style="color:red;" data-toggle="tooltip" data-placement="top" title="Pending !"></i>
+                                    }
+                                    else if (item.Status.Equals("Completed"))
+                                    {
+                                        <i class="fas fas fa-check-double" style="color:green;" data-toggle="tooltip" data-placement="top" title="Completed !"></i>
+                                    }
+                                    else if (item.Status.Equals("Approved"))
+                                    {
+                                        <i class="fas fa-check" style="color:blue;" data-toggle="tooltip" data-placement="top" title="Approved !"></i>
+                                    }
+                                    else
+                                    {
+                                        <i class="fas fa-sync fa-spin" style="color:orange;" data-toggle="tooltip" data-placement="top" title="Processing !"></i>
+                                    }
+                                    @if (item.PayDone == true)
+                                    {
+                                        <i class="fas fa-check-circle" style="color:yellowgreen;" data-toggle="tooltip" data-placement="top" title="Payment Done !"></i>
+                                    }
+                                </td>
+                                <td>
+                                    <button type="Submit" value="@item.Id" class="Infoform btn btn-info" data-toggle="tooltip" data-placement="top" title="View Info !">
+                                        <i class="fas fa-info"></i>
+                                    </button>
+                                    @if (item.Status.Equals("Completed") && item.PayDone == null)
+                                    {
+                                        <button type="Submit" value="@item.Id" class="Payform btn btn-primary" data-toggle="tooltip" data-placement="top" title="Pay Bill">
+                                            <i class="fab fa-amazon-pay"></i>
+                                        </button>
+                                    }
+                                    else if (item.Status.Equals("Completed") && item.PayDone == true)
+                                    {
+                                        <button type="Submit" value="@item.Id" class="Feedbackform btn btn-primary" data-toggle="tooltip" data-placement="top" title="Add Feedback :)">
+                                            <i class="fas fa-comments"></i>
+                                        </button>
+                                    }
+                                    else
+                                    {
+                                        <button type="Submit" value="@item.Id" class="Payform btn btn-dark"  data-toggle="tooltip" data-placement="top" title="Work in Progress" disabled>
+                                            <i class="fab fa-amazon-pay"></i>
+                                        </button>
+                                    }
+                                    @*<a href='@Url.Action("EditAppointment","User", new { id = item.Id })' class="btn btn-warning">
+                                            <i class="far fa-edit"></i>
+                                        </a>
+                                        <a href='@Url.Action("DeleteAppointment","User", new { id = item.Id })' class="btn btn-danger">
+                                            <i class="fas fa-toggle-off"></i>
+                                        </a>*@
+
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.BookingDate)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ReturnDate)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.TotalAmmount)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.VehicleId)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.DealerId)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Status)
+                            </th>
+                            <th>
+
+                            </th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<div id="myModal" class="modal" style="width:100%; padding-right:1%;padding-left:10%;">
+
+</div>
+
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+
+            $(".Infoform").click(function (evt) {
+                var CatID = $(this).val();
+                $.get('@Url.Action("AppointmentDetails", "User")?id=' + CatID, function(data) {
+                    $('#myModal').html(data);
+                    $('#myModal').css("display","block");
+                });
+            });
+            $(".Payform").click(function (evt) {
+                var CatID = $(this).val();
+                $.get('@Url.Action("Pay", "User")?id=' + CatID, function(data) {
+                    $('#myModal').html(data);
+                    $('#myModal').css("display","block");
+                });
+            });
+            $(".Feedbackform").click(function (evt) {
+                var CatID = $(this).val();
+                $.get('@Url.Action("Feedback", "User")?id=' + CatID, function(data) {
+                    $('#myModal').html(data);
+                    $('#myModal').css("display","block");
+                });
+            });
+
+        });
+    </script>
+
+    <script type="text/javascript">
+        var modal = document.getElementById("myModal");
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                modal.innerHTML = "";
+            }
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+
+
+    <script>
+    $(document).ready(function () {
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "onclick": null,
+            "showDuration": "200",
+            "hideDuration": "1500",
+            "timeOut": "6000",
+            "extendedTimeOut": "1200",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        };
+
+        var Type = "@TempData["Type"]";
+        var Message = "@TempData["Message"]";
+        if (Type == "0") {
+            toastr.success(Message, 'The Site Says')
+        } else if (Type == "1") {
+            toastr.info(Message, 'The Site Says')
+        } else if (Type == "2") {
+            toastr.warning(Message, 'The Site Says')
+        } else if (Type == "3") {
+            toastr.error(Message, 'Inconceivable!')
+        }
+    });
+    </script>
+}

@@ -1,0 +1,68 @@
+﻿@model ASC.Common.MechanicFormModel
+
+
+<div class="modal-content">
+    <div class="form-horizontal">
+        @using (Html.BeginForm("Edit", "Mechanics", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            @Html.HiddenFor(model => model.mechanic.Id)
+            <div class="card-body">
+                <h5 class="card-title">
+                    Edit Mechanic
+                    <span class="close" id="close">&times;</span>
+                </h5>
+                <br>
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.mechanic.Name, htmlAttributes: new { @class = "control-label col-md-3 m-t-15" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.mechanic.Name, new { htmlAttributes = new { @class = "form-control", required = "required", @type = "text" } })
+                        @Html.ValidationMessageFor(model => model.mechanic.Name, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.mechanic.Email, htmlAttributes: new { @class = "control-label col-md-3 m-t-15" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.mechanic.Email, new { htmlAttributes = new { @class = "form-control", required = "required", @type = "email" } })
+                        @Html.ValidationMessageFor(model => model.mechanic.Email, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.mechanic.PhoneNumber, htmlAttributes: new { @class = "control-label col-md-3 m-t-15" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.mechanic.PhoneNumber, new { htmlAttributes = new { @class = "form-control", required = "required", @type = "tel", pattern = "[1-9]{1}[0-9]{9}" } })
+                        @Html.ValidationMessageFor(model => model.mechanic.PhoneNumber, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.mechanic.DealerId, htmlAttributes: new { @class = "control-label col-md-3 m-t-15" })
+                    <div class="col-md-9">
+                        @Html.DropDownListFor(model => model.mechanic.DealerId, new SelectList(Model.dealers, "Id", "Name"), "Select", new { id = "myDropDownlistID", @class = "form-control", required = "required" })
+                        @Html.ValidationMessageFor(model => model.mechanic.DealerId, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.mechanic.IsActive, htmlAttributes: new { @class = "control-label col-md-3 m-t-15" })
+                    <div class="col-md-9">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.mechanic.IsActive)
+                            @Html.ValidationMessageFor(model => model.mechanic.IsActive, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-top">
+                <div class="card-body" align="center">
+                    <button type="Submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () { $("#myDropDownlistID").select2(); });
+</script>

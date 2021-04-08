@@ -1,0 +1,125 @@
+﻿@model ASC.Common.VehicleFormModel
+
+@{
+    ViewBag.Title = "Edit";
+
+    List<SelectListItem> items = new List<SelectListItem>();
+    items.Add(new SelectListItem { Text = "Petrol", Value = "Petrol" });
+    items.Add(new SelectListItem { Text = "Diesel", Value = "Diesel" });
+    items.Add(new SelectListItem { Text = "Gas", Value = "Gas" });
+    items.Add(new SelectListItem { Text = "Electric", Value = "Electric" });
+}
+
+
+<div class="modal-content">
+    <div class="form-horizontal">
+        @using (Html.BeginForm("Edit", "Vehicles", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            @Html.HiddenFor(model => model.vehicle.Id)
+            <div class="card-body">
+                <h5 class="card-title">
+                    Edit Vehicle
+                    <span class="close" id="close">&times;</span>
+                </h5>
+                <br>
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.vehicle.Name, htmlAttributes: new { @class = "control-label col-md-3 m-t-15" })
+                    <div class="col-md-8">
+                        @Html.EditorFor(model => model.vehicle.Name, new { htmlAttributes = new { @class = "form-control", required = "required", @type = "text" } })
+                        @Html.ValidationMessageFor(model => model.vehicle.Name, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.vehicle.NumberPlate, htmlAttributes: new { @class = "control-label col-md-3 m-t-15" })
+                    <div class="col-md-8">
+                        @Html.EditorFor(model => model.vehicle.NumberPlate, new { htmlAttributes = new { @class = "form-control", required = "required", @type = "text", pattern = "[A-Z]{2}[0-9]{2}[A-Z]{2}[0-9]{4}" } })
+                        @Html.ValidationMessageFor(model => model.vehicle.NumberPlate, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.vehicle.ChassisNumber, htmlAttributes: new { @class = "control-label col-md-3 m-t-15" })
+                    <div class="col-md-8">
+                        @Html.EditorFor(model => model.vehicle.ChassisNumber, new { htmlAttributes = new { @class = "form-control", required = "required", @type = "text", pattern = "[A-Z0-9]{17}" } })
+                        @Html.ValidationMessageFor(model => model.vehicle.ChassisNumber, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.vehicle.RegistrationDate, htmlAttributes: new { @class = "control-label col-md-3 m-t-15" })
+                    <div class="col-md-8">
+                        @Html.EditorFor(model => model.vehicle.RegistrationDate, new { htmlAttributes = new { @class = "form-control", required = "required" } })
+                        @Html.ValidationMessageFor(model => model.vehicle.RegistrationDate, "", new { @class = "text-danger" })
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.vehicle.LastServiceDate, htmlAttributes: new { @class = "control-label col-md-3 m-t-15" })
+                    <div class="col-md-8">
+                        @Html.EditorFor(model => model.vehicle.LastServiceDate, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.vehicle.LastServiceDate, "", new { @class = "text-danger" })
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.vehicle.FuelType, htmlAttributes: new { @class = "control-label col-md-3 m-t-15" })
+                    <div class="col-md-8">
+                        @Html.DropDownListFor(model => model.vehicle.FuelType, new SelectList(items, "Value", "Text"), "Select", new { id = "myDropDownlistID4", @class = "form-control", required = "required" })
+                        @Html.ValidationMessageFor(model => model.vehicle.FuelType, "", new { @class = "text-danger" })
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.vehicle.CustomerId, htmlAttributes: new { @class = "control-label col-md-3 m-t-15" })
+                    <div class="col-md-8">
+                        @Html.DropDownListFor(model => model.vehicle.CustomerId, new SelectList(Model.customers, "Id", "Name"), "Select", new { id = "myDropDownlistID", @class = "form-control", required = "required" })
+                        @Html.ValidationMessageFor(model => model.vehicle.CustomerId, "", new { @class = "text-danger" })
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.vehicle.Model.BrandId, htmlAttributes: new { @class = "control-label col-md-3 m-t-15" })
+                    <div class="col-md-8">
+
+                        @Html.DropDownListFor(model => model.vehicle.Model.BrandId, new SelectList(Model.brands, "Id", "Name"), "Select", new { id = "myDropDownlistID3", @class = "form-control", required = "required" })
+                        @Html.ValidationMessageFor(model => model.vehicle.Model.BrandId, "", new { @class = "text-danger" })
+
+                    </div>
+
+                </div>
+                <div class="form-group row" id="ModelDD" style="display:none;">
+                    @Html.HiddenFor(model => model.vehicle.ModelId)
+                </div>
+            </div>
+
+            <div class="border-top">
+                <div class="card-body" align="center">
+                    <button type="Submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#myDropDownlistID").select2();
+        $("#myDropDownlistID3").select2();
+        $("#myDropDownlistID4").select2();
+
+        $("##myDropDownlistID2").select2();
+    });
+</script>
+<script>
+        $(document).ready(function () {
+            $("#myDropDownlistID3").change(function (evt) {
+                var CatID = $('#myDropDownlistID3').val();
+                  $.get('@Url.Action("CreateDropdown", "Vehicles")?id=' + CatID, function(data) {
+                    $('#ModelDD').html(data);
+                      $('#ModelDD').css("display", "block");
+                      $('#myDropDownlistID2').val(@Model.vehicle.ModelId);
+                });
+            });
+        });
+</script>

@@ -1,0 +1,71 @@
+﻿@model ASC.Common.IndexCounts
+
+@{
+    ViewBag.Title = "Index";
+}
+<link href="~/Template/css/IndexStyle.css" rel="stylesheet" />
+
+<div class="container-fluid">
+    <h1>&nbsp;</h1>
+    <section id="counts" class="counts">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-3">
+                    <div class="count-box">
+                        <i class="icofont-doctor-alt">
+                            <i class="fas fa-users"></i>
+                        </i>
+                        <span data-toggle="counter-up">
+                            @Html.DisplayFor(model => model.count1)
+                        </span>
+                        <p><h5>Customers</h5></p>
+                        <a class="btn btn-primary btn-sm" href="@Url.Action("", "Customer")">view</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="count-box">
+                        <i class="icofont-patient-bed">
+                            <i class="fas fa-car"></i>
+                        </i>
+                        <span data-toggle="counter-up">
+                            @Html.DisplayFor(model => model.count2)
+                        </span>
+                        <p><h5>Vehicles</h5></p>
+                        <a class="btn btn-primary btn-sm" href="@Url.Action("", "Vehicle")">view</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="count-box">
+                        <i class="icofont-laboratory">
+                            <i class="fas fa-user"></i>
+                        </i>
+                        <span data-toggle="counter-up">
+                            @Html.DisplayFor(model => model.count3)
+                        </span>
+                        <p><h5>Dealers</h5></p>
+                        <a class="btn btn-primary btn-sm" href="@Url.Action("", "Dealer")">view</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="count-box">
+                        <i class="icofont-award">
+                            <i class="fas fa-calendar"></i>
+                        </i>
+                        <span data-toggle="counter-up">
+                            @Html.DisplayFor(model => model.count4)
+                        </span>
+                        <p><h5>Appointments</h5></p>
+                        <a class="btn btn-primary btn-sm" href="@Url.Action("", "Appointment")">view</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+</div>
