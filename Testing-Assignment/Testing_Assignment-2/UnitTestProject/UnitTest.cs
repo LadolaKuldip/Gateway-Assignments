@@ -10,119 +10,132 @@ namespace UnitTestProject
 
         [Theory]
         [InlineData("TestString", "tESTsTRING")]
-        public void ChangeCase(string input1, string expected1)
+        public void InvertsCase_BothCases_String_Input_Test(string input1, string expected1)
         {
-            //Arrange
+            // Arrange
             
-            //Act
-            string output = input1.ChangeCase();
+            // Act
+            string output = input1.InvertsCase();
 
-            //Assert
+            // Assert
             Assert.Equal(expected1 ,output);
         }
 
         [Fact]
-        public void ConvertTitleCase()
+        public void InvertsCase_Integers_String_Input_Test()
         {
-            //Arrange
-            input = "unit test";
-            expected = "Unit Test";
-            //Act
-            string output = input.ConvertTitleCase();
+            // Arrange
+            input = "1234";
+            expected = "1234";
+            // Act
+            string output = input.ConvertToTitleCase();
 
-            //Assert
+            // Assert
             Assert.Equal(expected, output);
         }
 
         [Fact]
-        public void ConvertCapitalized()
+        public void ConvertToTitleCase_LowerCases_String_Input_Test()
         {
-            //Arrange
+            // Arrange
             input = "unit test";
             expected = "Unit Test";
-            //Act
-            string output = input.ConvertCapitalized();
+            // Act
+            string output = input.ConvertToTitleCase();
 
-            //Assert
+            // Assert
             Assert.Equal(expected, output);
         }
 
         [Fact]
-        public void CheckForLower()
+        public void ConvertToCapitalized_LowerCases_String_Input_Test()
         {
-            //Arrange
+            // Arrange
+            input = "unit";
+            expected = "Unit";
+            // Act
+            string output = input.ConvertToCapitalized();
+
+            // Assert
+            Assert.Equal(expected, output);
+        }
+
+        [Fact]
+        public void CheckForLowercase_LowerCases_String_Input_Test()
+        {
+            // Arrange
             input = "unittest";
             expected = "Success";
-            //Act
-            string output = input.CheckForLower();
+            // Act
+            string output = input.CheckForLowercase();
 
-            //Assert
+            // Assert
             Assert.Equal(expected, output);
         }
 
         [Fact]
-        public void CheckForUppar()
+        public void CheckForUpparcase_UpparCases_String_Input_Test()
         {
-            //Arrange
+            // Arrange
             input = "UNITTEST";
             expected = "Success";
-            //Act
-            string output = input.CheckForUppar();
+            // Act
+            string output = input.CheckForUpparcase();
 
-            //Assert
+            // Assert
             Assert.Equal(expected, output);
         }
 
         [Fact]
-        public void CheckforInt()
+        public void CheckForInteger_Integers_String_Input_Test()
         {
-            //Arrange
+            // Arrange
             input = "100";
             expected = "Success";
-            //Act
-            string output = input.CheckforInt();
+            // Act
+            string output = input.CheckForInteger();
 
-            //Assert
+            // Assert
             Assert.Equal(expected, output);
         }
 
         [Fact]
-        public void RemoveLastChar()
+        public void RemoveLastCharacter_Alphanumeric_String_Input_Test()
         {
-            //Arrange
+            // Arrange
             input = "Unit Test";
             expected = "Unit Tes";
-            //Act
-            string output = input.RemoveLastChar();
+            // Act
+            string output = input.RemoveLastCharacter();
 
-            //Assert
+            // Assert
             Assert.Equal(expected, output);
         }
 
         [Fact]
-        public void WordCount()
+        public void CountNoOfWords_Alphanumeric_String_Input_Test()
         {
-            //Arrange
+            // Arrange
             input = "Unit Test";
             expected = "2";
-            //Act
-            string output = input.WordCount();
+            // Act
+            string output = input.CountNoOfWords();
 
-            //Assert
+            // Assert
             Assert.Equal(expected, output);
         }
 
 
         [Fact]
-        public void StringToInt()
+        public void StringToInt_Integers_String_Input_Test()
         {
-            //Arrange
+            // Arrange
             input = "100";
             expected = "100";
-            //Act
+            // Act
             string output = input.StringToInt();
 
-            //Assert
+            // Assert
             Assert.Equal(expected, output);
         }
     }

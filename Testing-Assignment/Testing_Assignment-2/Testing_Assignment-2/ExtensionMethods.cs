@@ -10,12 +10,11 @@ namespace Testing_Assignment_2
     public static class ExtensionMethods
     {
         /// <summary>
-        /// Inverts the case of letters in the string
+        /// Inverts the case of letters in the string.
         /// </summary>
-        /// <returns>
-        /// The string with inverted case
-        /// </returns>
-        public static string ChangeCase(this string input)
+        /// <param name="input">String input parameter</param>
+        /// <returns>String with inverted case of char.</returns>
+        public static string InvertsCase(this string input)
         {
             string output = "";
             int ascii = 0;
@@ -32,34 +31,43 @@ namespace Testing_Assignment_2
         }
 
         /// <summary>
-        /// Converts the string to titlecase
+        /// Converts the specified string to title case.
         /// </summary>
-        /// <returns>
-        /// string converted to titlecase
-        /// </returns>
-        public static string ConvertTitleCase(this string input)
+        /// <param name="input">String input parameter</param>
+        /// <returns>String with each word converted to title case</returns>
+        public static string ConvertToTitleCase(this string input)
         {
-            return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(input.ToLower());
+            string[] stringsArray = input.Split(' ');
+            string output = "";
+            foreach (var item in stringsArray)
+            {
+                output += item.ConvertToCapitalized() + " ";
+            }
+            return output.Substring(0, input.Length);
         }
 
         /// <summary>
-        /// Converts the string to Capitalized
+        /// Converts the specified string to capitalized form.
         /// </summary>
-        /// <returns>
-        /// string converted to Capitalized
-        /// </returns>
-        public static string ConvertCapitalized(this string input)
+        /// <param name="input">String input parameter</param>
+        /// <returns>String with each word converted to capitalized form</returns>
+        public static string ConvertToCapitalized(this string input)
         {
-            return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(input.ToLower());            
+            if(input.Length >0)
+            {
+                char[] charArray = input.ToLower().ToCharArray();
+                charArray[0] = char.ToUpper(charArray[0]);
+                return new string(charArray);
+            }
+            return input;
         }
 
         /// <summary>
-        /// Indicates whether the string provided contains all lowercase letters
+        /// indicates whether the string provided contains all lowercase letters.
         /// </summary>
-        /// <returns>
-        /// Success if all the characters in the string are lowercase 
-        /// </returns>
-        public static string CheckForLower(this string input)
+        /// <param name="input">String input parameter</param>
+        /// <returns>'Success' if all the characters in the string are lowercase</returns>
+        public static string CheckForLowercase(this string input)
         {
             bool result = true;
             foreach (var character in input)
@@ -87,12 +95,11 @@ namespace Testing_Assignment_2
         }
 
         /// <summary>
-        /// Indicates whether the string provided contains all uppercase letters
+        /// indicates whether the string provided contains all uppercase letters.
         /// </summary>
-        /// <returns>
-        /// Success if all the characters in the string are uppercase 
-        /// </returns>
-        public static string CheckForUppar(this string input)
+        /// <param name="input">String input parameter</param>
+        /// <returns>'Success' if all the characters in the string are uppercase</returns>
+        public static string CheckForUpparcase(this string input)
         {
             bool result = true;
             foreach (var character in input)
@@ -120,12 +127,11 @@ namespace Testing_Assignment_2
         }
 
         /// <summary>
-        /// Indicates whether the string provided can be converted to an integer
+        /// indicates whether the string provided can be converted to an integer
         /// </summary>
-        /// <returns>
-        /// Success if the string can be converted
-        /// </returns>
-        public static string CheckforInt(this string input)
+        /// <param name="input">String input parameter</param>
+        /// <returns>'Success' if the string can be converted</returns>
+        public static string CheckForInteger(this string input)
         {
             try
             {
@@ -140,37 +146,34 @@ namespace Testing_Assignment_2
         }
 
         /// <summary>
-        /// Removes the last character from the given string
+        /// removes the last character from the given string.
         /// </summary>
-        /// <returns>
-        /// string with its last character removed
-        /// </returns>
-        public static string RemoveLastChar(this string input)
+        /// <param name="input">String input parameter</param>
+        /// <returns>String with its last character removed</returns>
+        public static string RemoveLastCharacter(this string input)
         {
             return input.Substring(0, input.Length - 1);
         }
 
         /// <summary>
-        /// Counts the number of words in the given string
+        /// Counts the number of words in the specified string.
         /// </summary>
-        /// <returns>
-        /// The number of words in the given string
-        /// </returns>
-        public static string WordCount(this string input)
+        /// <param name="input">String input parameter</param>
+        /// <returns>The number of words in the given string</returns>
+        public static string CountNoOfWords(this string input)
         {
             var wordCount = 0;
             for (var i = 0; i < input.Length; i++)
                 if (input[i] == ' ' || i == input.Length - 1)
                     wordCount++;
-            return wordCount.ToString();
+            return wordCount.ToString(); 
         }
 
         /// <summary>
-        /// Converts the given string to an integer
+        /// Converts the specified string to an integer.
         /// </summary>
-        /// <returns>
-        /// decimal if the given string can be converted, null otherwise
-        /// </returns>
+        /// <param name="input">String input parameter</param>
+        /// <returns>decimal if the given string can be converted, null otherwise</returns>
         public static string StringToInt(this string input)
         {
             try
