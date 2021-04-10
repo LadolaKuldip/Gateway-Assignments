@@ -36,13 +36,13 @@ namespace ViewLayer.Controllers
                 return NotFound();
             }
 
-            return View(department);
+            return PartialView(department);
         }
 
         // GET: Departments/Create
         public IActionResult Create()
         {
-            return View();
+            return PartialView();
         }
 
         // POST: Departments/Create
@@ -55,7 +55,7 @@ namespace ViewLayer.Controllers
                 string response = _departmentManager.AddDepartment(department);
                 return RedirectToAction(nameof(Index));
             }
-            return View(department);
+            return PartialView(department);
         }
 
         // GET: Departments/Edit/5
@@ -71,7 +71,7 @@ namespace ViewLayer.Controllers
             {
                 return NotFound();
             }
-            return View(department);
+            return PartialView(department);
         }
 
         // POST: Departments/Edit/5
@@ -92,7 +92,7 @@ namespace ViewLayer.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(department);
+            return PartialView(department);
         }
 
         // GET: Departments/Delete/5
@@ -108,7 +108,7 @@ namespace ViewLayer.Controllers
             {
                 return NotFound();
             }
-            return View(department);
+            return PartialView(department);
         }
 
         // POST: Departments/Delete/5

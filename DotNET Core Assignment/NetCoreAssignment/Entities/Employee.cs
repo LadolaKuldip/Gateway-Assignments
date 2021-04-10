@@ -17,8 +17,8 @@ namespace Entities
         public bool IsManager { get; set; }
 
         [Required]
-        public int Manager { get; set; }
-
+        public int  Manager { get; set; }
+        
         [Required]
         public string Phone { get; set; }
 

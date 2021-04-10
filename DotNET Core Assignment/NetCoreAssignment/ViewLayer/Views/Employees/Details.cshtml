@@ -4,9 +4,84 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<div class="modal-content">
+    <div class="form-horizontal">
+       
+        <div class="card-body">
+            <h5 class="card-title">
+                Employee Details
+                <span class="close" id="close">&times;</span>
+            </h5>
+            <hr />
+            <div class="form-group row">
+                <div class="control-label col-md-3 m-t-15">
+                    <strong>@Html.DisplayNameFor(model => model.Name)</strong>
+                </div>
+                <div class="col-md-9">
+                    @Html.DisplayFor(model => model.Name)
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="control-label col-md-3 m-t-15">
+                    <strong>@Html.DisplayNameFor(model => model.Salary)</strong>
+                </div>
+                <div class="col-md-9">
+                    @Html.DisplayFor(model => model.Salary)
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="control-label col-md-3 m-t-15">
+                    <strong>@Html.DisplayNameFor(model => model.IsManager)</strong>
+                </div>
+                <div class="col-md-9">
+                    @Html.DisplayFor(model => model.IsManager)
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="control-label col-md-3 m-t-15">
+                    <strong> @Html.DisplayNameFor(model => model.Manager)</strong>
+                </div>
+                <div class="col-md-9">
+                    @Html.DisplayFor(model => model.Manager)
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="control-label col-md-3 m-t-15">
+                    <strong>@Html.DisplayNameFor(model => model.Phone)</strong>
+                </div>
+                <div class="col-md-9">
+                    @Html.DisplayFor(model => model.Phone)
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="control-label col-md-3 m-t-15">
+                    <strong>@Html.DisplayNameFor(model => model.Email)</strong>
+                </div>
+                <div class="col-md-9">
+                    @Html.DisplayFor(model => model.Email)
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="control-label col-md-3 m-t-15">
+                    <strong>@Html.DisplayNameFor(model => model.Department)</strong>
+                </div>
+                <div class="col-md-9">
+                    @Html.DisplayFor(model => model.Department.Name)
+                </div>
+            </div>
 
-<div>
+        </div>
+
+            <div class="border-top">
+                <div class="card-body" align="center">
+                   
+                </div>
+            </div>
+        
+    </div>
+</div>
+
+@*<div>
     <h4>Employee</h4>
     <hr />
     <dl class="row">
@@ -58,3 +133,4 @@
     <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>
+*@

@@ -2,7 +2,6 @@ C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\Entities\bin\Debug\net5.0\
 C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\Entities\bin\Debug\net5.0\Entities.dll
 C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\Entities\bin\Debug\net5.0\ref\Entities.dll
 C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\Entities\bin\Debug\net5.0\Entities.pdb
-C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\Entities\obj\Debug\net5.0\Entities.csprojAssemblyReference.cache
 C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\Entities\obj\Debug\net5.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\Entities\obj\Debug\net5.0\Entities.AssemblyInfoInputs.cache
 C:\Users\kuldip.ladola\source\repos\NetCoreAssignment\Entities\obj\Debug\net5.0\Entities.AssemblyInfo.cs

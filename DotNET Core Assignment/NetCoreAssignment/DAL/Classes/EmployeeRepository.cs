@@ -1,5 +1,6 @@
 ﻿using DAL.Interfaces;
 using Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -111,7 +112,7 @@ namespace DAL.Classes
         /// </returns>
         public Employee GetEmployee(int id)
         {
-            var entity = _dbContext.Employees.Find(id);
+            var entity = _dbContext.Employees.Include(d => d.Department).Where(d => d.Id == id).FirstOrDefault();
 
             if (entity == null)
             {
@@ -128,7 +129,7 @@ namespace DAL.Classes
         /// </returns>
         public IEnumerable<Employee> GetEmployees()
         {
-            var entities = _dbContext.Employees.ToList();
+            var entities = _dbContext.Employees.Include(d =>d.Department).ToList();
             return entities;
         }
 

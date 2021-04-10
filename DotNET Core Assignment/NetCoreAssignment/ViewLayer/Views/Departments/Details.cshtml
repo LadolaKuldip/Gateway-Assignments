@@ -3,8 +3,36 @@
 @{
     ViewData["Title"] = "Details";
 }
+ 
+<div class="modal-content">
+    <div class="form-horizontal">
 
-<h1>Details</h1>
+        <div class="card-body">
+            <h5 class="card-title">
+                Department Details
+                <span class="close" id="close">&times;</span>
+            </h5>
+            <hr />
+            <div class="form-group row">
+                <div class="control-label col-md-3 m-t-15">
+                    <strong>@Html.DisplayNameFor(model => model.Name)</strong>
+                </div>
+                <div class="col-md-9">
+                    @Html.DisplayFor(model => model.Name)
+                </div>
+            </div>
+        </div>
+
+        <div class="border-top">
+            <div class="card-body" align="center">
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@*<h1>Details</h1>
 
 <div>
     <h4>Department</h4>
@@ -21,4 +49,4 @@
 <div>
     <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
-</div>
+</div>*@

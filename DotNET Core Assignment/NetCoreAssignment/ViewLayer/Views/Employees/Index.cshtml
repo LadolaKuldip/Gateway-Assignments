@@ -3,13 +3,12 @@
 @{
     ViewData["Title"] = "Index";
 }
-
+<link rel="stylesheet" href="~/css/popup-form.css" />
 <h1>Index</h1>
-
 <p>
-    <a asp-action="Create">Create New</a>
+    <button id="myBtn" type="Submit" class="btn btn-danger"><i class="fas fa-plus"></i> New</button>    
 </p>
-<table class="table">
+<table class="table table-hover">
     <thead>
         <tr>
             <th>
@@ -37,35 +36,95 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Salary)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsManager)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Manager)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Phone)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Department.Name)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Salary)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsManager)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Manager)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Department.Name)
+                </td>
+                <td>
+                    <button type="Submit" value="@item.Id" class="Editform btn btn-sm btn-primary" data-toggle="tooltip" data-placement="top" title="Edit Info !">
+                        <i class="far fa-edit"></i>
+                    </button>
+                    <button type="Submit" value="@item.Id" class="Detailsform btn btn-sm btn-success" data-toggle="tooltip" data-placement="top" title="View Info !">
+                        <i class="fa fa-info"></i>
+                    </button>
+                    <button type="Submit" value="@item.Id" class="Deleteform btn btn-sm btn-danger" data-toggle="tooltip" data-placement="top" title="Delete Info !">
+                        <i class="fa fa-trash"></i>
+                    </button>
+                    @*<a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-primary" data-toggle="tooltip" data-placement="top" title="View Info !"><i class="fa fa-pen"></i></a>
+                      <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-success"><i class="fa fa-info"></i></a>
+                      <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>*@
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+
+<div id="myModal" class="modal" style="width:80%;">
+
+</div>
+
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $("#myBtn").click(function (evt) {
+                $.get( '@Url.Action("Create", "Employees", new {} )', function(data) {
+                    $('#myModal').html(data);
+                    $('#myModal').css("display", "block");
+                });
+            });
+            $(".Editform").click(function (evt) {
+                var CatID = $(this).val();
+                $.get('@Url.Action("Edit", "Employees")?id=' + CatID, function(data) {
+                    $('#myModal').html(data);
+                    $('#myModal').css("display","block");
+                });
+            });
+            $(".Deleteform").click(function (evt) {
+                var CatID = $(this).val();
+                $.get('@Url.Action("Delete", "Employees")?id=' + CatID, function(data) {
+                    $('#myModal').html(data);
+                    $('#myModal').css("display","block");
+                });
+            });
+            $(".Detailsform").click(function (evt) {
+                var CatID = $(this).val();
+                $.get('@Url.Action("Details", "Employees")?id=' + CatID, function(data) {
+                    $('#myModal').html(data);
+                    $('#myModal').css("display","block");
+                });
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        var modal = document.getElementById("myModal");
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                modal.innerHTML = "";
+            }
+        }
+    </script>
+   
+}

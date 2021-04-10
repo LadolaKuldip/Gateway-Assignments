@@ -24,9 +24,7 @@ namespace ViewLayer.Logging
             {
                 path = "Home/Index";
             }
-            //var controllerName = context.GetRouteValue("controller");
-            //var actionName = context.GetRouteValue("action");
-
+           
             // Start the Timer using Stopwatch  
             var watch = new Stopwatch();
             watch.Start();
@@ -38,7 +36,7 @@ namespace ViewLayer.Logging
                 var responseTimeForCompleteRequest = watch.ElapsedMilliseconds;
 
                 // Add the Response time information in the Response headers.   
-                context.Response.Headers["X-Response-Time-ms"] = responseTimeForCompleteRequest.ToString();
+                context.Response.Headers["Page-Response-Time-ms"] = responseTimeForCompleteRequest.ToString();
 
                 // Log the Response time information in the File.   
                 _logger.LogInformation($"({path}) Response time Captured : {responseTimeForCompleteRequest}");

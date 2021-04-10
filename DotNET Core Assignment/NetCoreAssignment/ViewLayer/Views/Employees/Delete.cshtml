@@ -4,7 +4,80 @@
     ViewData["Title"] = "Delete";
 }
 
-<h1>Delete</h1>
+
+<div class="modal-content">
+    <div class="form-horizontal">
+
+        <div class="card-body">
+            <h5 class="card-title">
+                Employee Delete
+                <span class="close" id="close">&times;</span>
+            </h5>
+            <hr />
+            <div class="form-group row">
+                <div class="col-md-12">
+                    <h3>Are you sure you want to delete this?</h3>
+                </div>
+                
+            </div>
+            <div class="form-group row">
+                <div class="control-label col-md-3 m-t-15">
+                    <strong>@Html.DisplayNameFor(model => model.Name)</strong>
+                </div>
+                <div class="col-md-9">
+                    @Html.DisplayFor(model => model.Name)
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="control-label col-md-3 m-t-15">
+                    <strong> @Html.DisplayNameFor(model => model.Manager)</strong>
+                </div>
+                <div class="col-md-9">
+                    @Html.DisplayFor(model => model.Manager)
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="control-label col-md-3 m-t-15">
+                    <strong>@Html.DisplayNameFor(model => model.Phone)</strong>
+                </div>
+                <div class="col-md-9">
+                    @Html.DisplayFor(model => model.Phone)
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="control-label col-md-3 m-t-15">
+                    <strong>@Html.DisplayNameFor(model => model.Email)</strong>
+                </div>
+                <div class="col-md-9">
+                    @Html.DisplayFor(model => model.Email)
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="control-label col-md-3 m-t-15">
+                    <strong>@Html.DisplayNameFor(model => model.Department)</strong>
+                </div>
+                <div class="col-md-9">
+                    @Html.DisplayFor(model => model.Department.Name)
+                </div>
+            </div>
+
+        </div>
+
+        <div class="border-top">
+            <div class="card-body" align="center">
+                <form asp-action="Delete">
+                    <input type="hidden" asp-for="Id" />
+                    <input type="submit" value="Delete" class="btn btn-danger" />
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+@*<h1>Delete</h1>
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
@@ -61,3 +134,4 @@
         <a asp-action="Index">Back to List</a>
     </form>
 </div>
+*@

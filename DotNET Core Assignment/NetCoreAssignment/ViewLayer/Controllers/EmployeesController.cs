@@ -42,7 +42,7 @@ namespace ViewLayer.Controllers
                 return NotFound();
             }
 
-            return View(department);
+            return PartialView(department);
         }
 
         // GET: Employees/Create
@@ -52,7 +52,7 @@ namespace ViewLayer.Controllers
             var managers = _employeeManager.GetManagers();
             ViewData["DepartmentId"] = new SelectList(departments, "Id", "Name");
             ViewData["Manager"] = new SelectList(managers, "Id", "Name");
-            return View();
+            return PartialView();
         }
 
         // POST: Employees/Create
@@ -69,7 +69,7 @@ namespace ViewLayer.Controllers
             ViewData["DepartmentId"] = new SelectList(departments, "Id", "Name", employee.DepartmentId);
             var managers = _employeeManager.GetManagers();
             ViewData["Manager"] = new SelectList(managers, "Id", "Name", employee.Manager);
-            return View(employee);
+            return PartialView(employee);
         }
 
         // GET: Employees/Edit/5
@@ -89,7 +89,7 @@ namespace ViewLayer.Controllers
             ViewData["DepartmentId"] = new SelectList(departments, "Id", "Name", employee.DepartmentId);
             var managers = _employeeManager.GetManagers();
             ViewData["Manager"] = new SelectList(managers, "Id", "Name", employee.Manager);
-            return View(employee);
+            return PartialView(employee);
         }
 
         // POST: Employees/Edit/5
@@ -113,7 +113,7 @@ namespace ViewLayer.Controllers
             ViewData["DepartmentId"] = new SelectList(departments, "Id", "Name", employee.DepartmentId);
             var managers = _employeeManager.GetManagers();
             ViewData["Manager"] = new SelectList(managers, "Id", "Name", employee.Manager);
-            return View(employee);
+            return PartialView(employee);
         }
 
         // GET: Employees/Delete/5
@@ -130,7 +130,7 @@ namespace ViewLayer.Controllers
                 return NotFound();
             }
 
-            return View(employee);
+            return PartialView(employee);
         }
 
         // POST: Employees/Delete/5

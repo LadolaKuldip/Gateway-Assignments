@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "uTY1nmyOpfyZ713ftQZ1ABW6xot+csuKLaoGmQ+gtyB25edqBs0WydDzBB8IEpsdy9ur+KMa6KGuakSl0A8aEQ==",
+  "dgSpecHash": "mXQq/xKdjQ3UqHblL8JJw5wFZW26aN8KlxjM9FVrOawGkyNhBCrAMkzDyf5nf+ho2sHNaNKx4F8Et4lKKejMDw==",
   "success": true,
   "projectFilePath": "C:\\Users\\kuldip.ladola\\source\\repos\\NetCoreAssignment\\ViewLayer\\ViewLayer.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\kuldip.ladola\\.nuget\\packages\\bootstrap\\4.6.0\\bootstrap.4.6.0.nupkg.sha512",
     "C:\\Users\\kuldip.ladola\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\kuldip.ladola\\.nuget\\packages\\jquery\\3.0.0\\jquery.3.0.0.nupkg.sha512",
     "C:\\Users\\kuldip.ladola\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.4\\microsoft.aspnetcore.cryptography.internal.5.0.4.nupkg.sha512",
     "C:\\Users\\kuldip.ladola\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.4\\microsoft.aspnetcore.cryptography.keyderivation.5.0.4.nupkg.sha512",
     "C:\\Users\\kuldip.ladola\\.nuget\\packages\\microsoft.aspnetcore.diagnostics\\2.2.0\\microsoft.aspnetcore.diagnostics.2.2.0.nupkg.sha512",
@@ -77,6 +79,7 @@
     "C:\\Users\\kuldip.ladola\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\kuldip.ladola\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\kuldip.ladola\\.nuget\\packages\\popper.js\\1.16.1\\popper.js.1.16.1.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\kuldip.ladola\\.nuget\\packages\\serilog\\2.5.0\\serilog.2.5.0.nupkg.sha512",
     "C:\\Users\\kuldip.ladola\\.nuget\\packages\\serilog.extensions.logging\\2.0.2\\serilog.extensions.logging.2.0.2.nupkg.sha512",
