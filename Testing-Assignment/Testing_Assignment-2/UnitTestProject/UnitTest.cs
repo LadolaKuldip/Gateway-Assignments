@@ -5,8 +5,8 @@ namespace UnitTestProject
 
     public class UnitTest
     {
-        string input = "";
-        string expected = "";
+        string input = string.Empty;
+        string expected = string.Empty;
 
         [Theory]
         [InlineData("TestString", "tESTsTRING")]
@@ -27,6 +27,7 @@ namespace UnitTestProject
             // Arrange
             input = "1234";
             expected = "1234";
+
             // Act
             string output = input.ConvertToTitleCase();
 
@@ -40,6 +41,7 @@ namespace UnitTestProject
             // Arrange
             input = "unit test";
             expected = "Unit Test";
+
             // Act
             string output = input.ConvertToTitleCase();
 
@@ -53,6 +55,7 @@ namespace UnitTestProject
             // Arrange
             input = "unit";
             expected = "Unit";
+
             // Act
             string output = input.ConvertToCapitalized();
 
@@ -66,6 +69,7 @@ namespace UnitTestProject
             // Arrange
             input = "unittest";
             expected = "Success";
+
             // Act
             string output = input.CheckForLowercase();
 
@@ -79,6 +83,7 @@ namespace UnitTestProject
             // Arrange
             input = "UNITTEST";
             expected = "Success";
+
             // Act
             string output = input.CheckForUpparcase();
 
@@ -92,6 +97,7 @@ namespace UnitTestProject
             // Arrange
             input = "100";
             expected = "Success";
+
             // Act
             string output = input.CheckForInteger();
 
@@ -105,6 +111,7 @@ namespace UnitTestProject
             // Arrange
             input = "Unit Test";
             expected = "Unit Tes";
+
             // Act
             string output = input.RemoveLastCharacter();
 
@@ -118,6 +125,7 @@ namespace UnitTestProject
             // Arrange
             input = "Unit Test";
             expected = "2";
+
             // Act
             string output = input.CountNoOfWords();
 
@@ -132,6 +140,7 @@ namespace UnitTestProject
             // Arrange
             input = "100";
             expected = "100";
+
             // Act
             string output = input.StringToInt();
 

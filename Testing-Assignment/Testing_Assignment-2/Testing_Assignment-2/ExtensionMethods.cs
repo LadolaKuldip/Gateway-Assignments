@@ -16,8 +16,8 @@ namespace Testing_Assignment_2
         /// <returns>String with inverted case of char.</returns>
         public static string InvertsCase(this string input)
         {
-            string output = "";
-            int ascii = 0;
+            string output = string.Empty;
+            int ascii;
             foreach (var ch in input)
             {
                 ascii = (int)ch;
@@ -38,7 +38,7 @@ namespace Testing_Assignment_2
         public static string ConvertToTitleCase(this string input)
         {
             string[] stringsArray = input.Split(' ');
-            string output = "";
+            string output = string.Empty;
             foreach (var item in stringsArray)
             {
                 output += item.ConvertToCapitalized() + " ";
@@ -55,9 +55,7 @@ namespace Testing_Assignment_2
         {
             if(input.Length >0)
             {
-                char[] charArray = input.ToLower().ToCharArray();
-                charArray[0] = char.ToUpper(charArray[0]);
-                return new string(charArray);
+                return char.ToUpper(input[0]) + input.Substring(1);
             }
             return input;
         }
@@ -182,7 +180,6 @@ namespace Testing_Assignment_2
             }
             catch (Exception)
             {
-
                 return "null";
             }
         }
