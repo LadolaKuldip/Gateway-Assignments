@@ -1,6 +1,8 @@
 using FluentAssertions;
+using FluentAssertions.Extensions;
 using NUnit.Framework;
 using Services;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -16,8 +18,8 @@ namespace NUnitTestProject
             _service = new Service();
         }
 
-
-        /// Testing Async Method
+        /// <summary>
+        /// Testing Async Method with FluentAssertions
         /// </summary>
         /// <returns></returns>
 
@@ -32,7 +34,7 @@ namespace NUnitTestProject
         }
 
         /// <summary>
-        /// Testing Async Method
+        /// Testing Async Method with FluentAssertions
         /// </summary>
         /// <returns></returns>
 
@@ -52,25 +54,37 @@ namespace NUnitTestProject
              .And.No.Property("Id").LessThanOrEqualTo(0));
         }
 
+        /// <summary>
+        /// Testing Method with FluentAssertions
+        /// </summary>
         [Test]
         public void GetTable_Test()
         {
+            // Arrange
             int number = 5;
 
+            // Act
             int[] data = _service.GetTable(number);
 
-             data.Should().NotBeEmpty()
+            // Assert
+            data.Should().NotBeEmpty()
             .And.HaveCount(10)
             .And.AllBeOfType(typeof(int))
             .And.StartWith(number*1)
-            .And.EndWith(number*10);
+            .And.EndWith(number*10)
+            .And.OnlyHaveUniqueItems();
         }
-        
+
+        /// <summary>
+        /// Testing Method with FluentAssertions
+        /// </summary>
         [Test]
         public void GetName_Test()
         {
+            // Act
             string value = _service.GetName();
 
+            // Assert
             value.Should().NotBeNullOrWhiteSpace()
             .And.Contain("kuldip")
             .And.Contain("l", Exactly.Thrice())
@@ -82,9 +96,27 @@ namespace NUnitTestProject
             );
         }
 
+        /// <summary>
+        /// Testing Method with FluentAssertions
+        /// </summary>
+        [Test]
+        public void Date_Test()
+        {           
+            // Arrange
+            DateTime deadline = new DateTime(2021, 04, 24);
 
+            // Act
+            DateTime? date = _service.GetSubmissionDate();
 
-
+            // Assert
+            date.Should().Be(23.April(2021))
+            .And.BeBefore(deadline)
+            .And.NotBeAfter(deadline)
+            .And.HaveDay(23)
+            .And.HaveMonth(04)
+            .And.HaveYear(2021)
+            .And.BeMoreThan(0.Days()).Before(deadline);
+        }
        
     }
 }
