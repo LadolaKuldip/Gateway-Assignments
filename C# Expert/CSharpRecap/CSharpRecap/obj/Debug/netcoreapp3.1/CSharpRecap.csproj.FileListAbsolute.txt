@@ -1,0 +1,13 @@
+C:\Users\Kuldip\source\repos\CSharpRecap\CSharpRecap\bin\Debug\netcoreapp3.1\CSharpRecap.exe
+C:\Users\Kuldip\source\repos\CSharpRecap\CSharpRecap\bin\Debug\netcoreapp3.1\CSharpRecap.deps.json
+C:\Users\Kuldip\source\repos\CSharpRecap\CSharpRecap\bin\Debug\netcoreapp3.1\CSharpRecap.runtimeconfig.json
+C:\Users\Kuldip\source\repos\CSharpRecap\CSharpRecap\bin\Debug\netcoreapp3.1\CSharpRecap.runtimeconfig.dev.json
+C:\Users\Kuldip\source\repos\CSharpRecap\CSharpRecap\bin\Debug\netcoreapp3.1\CSharpRecap.dll
+C:\Users\Kuldip\source\repos\CSharpRecap\CSharpRecap\bin\Debug\netcoreapp3.1\CSharpRecap.pdb
+C:\Users\Kuldip\source\repos\CSharpRecap\CSharpRecap\obj\Debug\netcoreapp3.1\CSharpRecap.csprojAssemblyReference.cache
+C:\Users\Kuldip\source\repos\CSharpRecap\CSharpRecap\obj\Debug\netcoreapp3.1\CSharpRecap.AssemblyInfoInputs.cache
+C:\Users\Kuldip\source\repos\CSharpRecap\CSharpRecap\obj\Debug\netcoreapp3.1\CSharpRecap.AssemblyInfo.cs
+C:\Users\Kuldip\source\repos\CSharpRecap\CSharpRecap\obj\Debug\netcoreapp3.1\CSharpRecap.csproj.CoreCompileInputs.cache
+C:\Users\Kuldip\source\repos\CSharpRecap\CSharpRecap\obj\Debug\netcoreapp3.1\CSharpRecap.dll
+C:\Users\Kuldip\source\repos\CSharpRecap\CSharpRecap\obj\Debug\netcoreapp3.1\CSharpRecap.pdb
+C:\Users\Kuldip\source\repos\CSharpRecap\CSharpRecap\obj\Debug\netcoreapp3.1\CSharpRecap.genruntimeconfig.cache
