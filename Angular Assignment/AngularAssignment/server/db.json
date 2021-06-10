@@ -62,22 +62,6 @@
           "address": "California, USA"
         }
       ]
-    },
-    {
-      "id": 1617264268949,
-      "name": "ferfrefrefre",
-      "email": "kuldip.ladola@thegatewaycorp.co.in",
-      "address": "few",
-      "totalEmployees": 12,
-      "totalBranch": 1,
-      "isActive": true,
-      "branch": [
-        {
-          "id": 1617264268949,
-          "name": "fer",
-          "address": "fre"
-        }
-      ]
     }
   ]
 }

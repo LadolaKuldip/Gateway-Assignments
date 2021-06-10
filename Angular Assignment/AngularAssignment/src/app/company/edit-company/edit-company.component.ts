@@ -1,34 +1,42 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, FormArray } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, FormArray, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Company } from '../model/company.model';
-import { CompanyServiceService } from '../company-service.service';
+import { Company } from '../../shared/model/company.model';
+import { CompanyServiceService } from '../../shared/services/company-service.service'
+
 @Component({
-  selector: 'app-add-company',
-  templateUrl: './add-company.component.html',
-  styleUrls: ['./add-company.component.css']
+  selector: 'app-edit-company',
+  templateUrl: './edit-company.component.html',
+  styleUrls: ['./edit-company.component.css']
 })
-export class AddCompanyComponent implements OnInit {
+export class EditCompanyComponent implements OnInit {
 
   submitted = false;
 
   addCompanyForm !: FormGroup;
-  company !: Company[];
+  company !: Company;
 
 
   constructor(private formBuilder: FormBuilder, private router: Router, private companyServiceService: CompanyServiceService) { }
 
   ngOnInit(): void {
     this.addCompanyForm = this.formBuilder.group({
-      id: [Math.floor(Math.random() * 10) + (new Date()).getTime()],
+      id: ['', [Validators.required]],
       name: ['', [Validators.required, Validators.minLength(8)]],
       email: ['', [Validators.required, Validators.email, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
       address: ['', Validators.required],
       totalEmployees: ['', Validators.required],
       totalBranch: ['', Validators.required],
       isActive: ['', Validators.required],
-      branch: this.formBuilder.array([this.formBuilder.group({ id: Math.floor(Math.random() * 10) + (new Date()).getTime(), name: '', address: '' })])
+      branch: this.formBuilder.array([])
     });
+
+    this.company = this.companyServiceService.getCompany();
+
+    for (const index in this.company.branch) {
+      this.addBranch();
+    }
+    this.addCompanyForm.setValue(this.company)
   }
 
   get registerFormControl() {
@@ -39,20 +47,27 @@ export class AddCompanyComponent implements OnInit {
     return this.addCompanyForm.get('branch') as FormArray;
   }
 
+  onCreate(): FormGroup {
+    return this.formBuilder.group({
+      id: Math.floor(Math.random() * 10) + (new Date()).getTime(),
+      name: '',
+      address: ''
+    })
+  }
+
   onSubmit() {
     debugger;
     this.submitted = true;
     if (this.addCompanyForm.invalid) {
       return;
     } else {
-      // console.log(this.addCompanyForm.value);
-      // companies.company.push(this.addCompanyForm.value)
       debugger;
-      this.companyServiceService.create(this.addCompanyForm.value).subscribe(
+      console.log(this.company);
+      this.companyServiceService.update(this.addCompanyForm.value).subscribe(
         res => {
 
           this.router.navigate(['/dashboard']);
-          setTimeout("location.reload(true);", 100);
+          // setTimeout("location.reload(true);", 100);
           this.addCompanyForm.reset();
         }
       );
@@ -60,10 +75,14 @@ export class AddCompanyComponent implements OnInit {
   }
 
   addBranch() {
-    this.branchs.push(this.formBuilder.group({ id: '', name: '', address: '' }))
+    this.branchs.push(this.onCreate())
   }
 
   deleteBranch(index: number) {
     this.branchs.removeAt(index);
   }
+
+
+
+
 }
