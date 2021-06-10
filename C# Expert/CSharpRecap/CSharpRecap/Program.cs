@@ -15,6 +15,7 @@ namespace CSharpRecap
             StudentDynamic.Exicute();
             Console.WriteLine(Environment.NewLine + "==================== Task 3 : Example of Delegate ==================== " + Environment.NewLine);
             DelegateFeature.Caller();
+            Console.ReadLine();
         }
 
     }
