@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { AddCompanyComponent } from './add-company/add-company.component';
-import { EditCompanyComponent } from './edit-company/edit-company.component';
+import { AddCompanyComponent } from './company/add-company/add-company.component';
+import { EditCompanyComponent } from './company/edit-company/edit-company.component';
 
 const routes: Routes = [
   {    

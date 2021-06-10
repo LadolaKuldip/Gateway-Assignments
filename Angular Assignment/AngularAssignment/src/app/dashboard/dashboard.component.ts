@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { CompanyServiceService } from '../company-service.service';
+import { CompanyServiceService } from '../shared/services/company-service.service';
 import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -17,6 +17,10 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
    
+    this.getCompnies(); 
+  }
+
+  getCompnies(){
     this.httpClient.get("http://localhost:3000/company").subscribe(data =>{
       console.log(data);
       this.companies = data;  
@@ -34,10 +38,12 @@ export class DashboardComponent implements OnInit {
   deleteCompany(id : number)
   {
     debugger;
-    
-      this.companyServiceService.delete(id).subscribe(res => {
-        setTimeout("location.reload(true);", 100);
-        console.log(res);
+    if (!confirm("Are you sure want to delete this record?")) {
+      return;
+    }     
+
+    this.companyServiceService.delete(id).subscribe(res => {
+        this.getCompnies();
       });
     
   }

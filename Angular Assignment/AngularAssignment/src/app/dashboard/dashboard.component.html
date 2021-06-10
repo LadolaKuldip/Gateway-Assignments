@@ -30,18 +30,7 @@
                     <th></th>
                   </tr>
                 </thead>
-                <tfoot>
-                  <tr>
-                    <th>Email</th>
-                    <th>Name</th>
-                    <th>Total Employees</th>
-                    <th>Address</th>
-                    <th>Status</th>
-                    <th>Total Branch</th>
-                    <th>Branch</th>
-                    <th></th>
-                  </tr>
-                </tfoot>
+                
                 <tbody>
                   <tr *ngFor="let company of companies">
                     <td>{{ company.email }}</td>
@@ -69,6 +58,18 @@
                     </td>
                   </tr>
                 </tbody>
+                <tfoot>
+                  <tr>
+                    <th>Email</th>
+                    <th>Name</th>
+                    <th>Total Employees</th>
+                    <th>Address</th>
+                    <th>Status</th>
+                    <th>Total Branch</th>
+                    <th>Branch</th>
+                    <th></th>
+                  </tr>
+                </tfoot>
               </table>
             </div>
           </div>
