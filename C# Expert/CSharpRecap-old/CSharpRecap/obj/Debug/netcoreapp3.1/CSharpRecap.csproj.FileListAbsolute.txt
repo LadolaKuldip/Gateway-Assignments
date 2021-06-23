@@ -11,16 +11,3 @@ C:\Users\Kuldip\source\repos\CSharpRecap\CSharpRecap\obj\Debug\netcoreapp3.1\CSh
 C:\Users\Kuldip\source\repos\CSharpRecap\CSharpRecap\obj\Debug\netcoreapp3.1\CSharpRecap.dll
 C:\Users\Kuldip\source\repos\CSharpRecap\CSharpRecap\obj\Debug\netcoreapp3.1\CSharpRecap.pdb
 C:\Users\Kuldip\source\repos\CSharpRecap\CSharpRecap\obj\Debug\netcoreapp3.1\CSharpRecap.genruntimeconfig.cache
-D:\C# Expert\CSharpRecap\CSharpRecap\bin\Debug\netcoreapp3.1\CSharpRecap.exe
-D:\C# Expert\CSharpRecap\CSharpRecap\bin\Debug\netcoreapp3.1\CSharpRecap.deps.json
-D:\C# Expert\CSharpRecap\CSharpRecap\bin\Debug\netcoreapp3.1\CSharpRecap.runtimeconfig.json
-D:\C# Expert\CSharpRecap\CSharpRecap\bin\Debug\netcoreapp3.1\CSharpRecap.runtimeconfig.dev.json
-D:\C# Expert\CSharpRecap\CSharpRecap\bin\Debug\netcoreapp3.1\CSharpRecap.dll
-D:\C# Expert\CSharpRecap\CSharpRecap\bin\Debug\netcoreapp3.1\CSharpRecap.pdb
-D:\C# Expert\CSharpRecap\CSharpRecap\obj\Debug\netcoreapp3.1\CSharpRecap.AssemblyInfoInputs.cache
-D:\C# Expert\CSharpRecap\CSharpRecap\obj\Debug\netcoreapp3.1\CSharpRecap.AssemblyInfo.cs
-D:\C# Expert\CSharpRecap\CSharpRecap\obj\Debug\netcoreapp3.1\CSharpRecap.csproj.CoreCompileInputs.cache
-D:\C# Expert\CSharpRecap\CSharpRecap\obj\Debug\netcoreapp3.1\CSharpRecap.dll
-D:\C# Expert\CSharpRecap\CSharpRecap\obj\Debug\netcoreapp3.1\CSharpRecap.pdb
-D:\C# Expert\CSharpRecap\CSharpRecap\obj\Debug\netcoreapp3.1\CSharpRecap.genruntimeconfig.cache
-D:\C# Expert\CSharpRecap\CSharpRecap\obj\Debug\netcoreapp3.1\CSharpRecap.csproj.AssemblyReference.cache
